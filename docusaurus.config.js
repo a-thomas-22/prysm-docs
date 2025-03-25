@@ -3,7 +3,7 @@ var prysmVersion = "v5.1.2";
 module.exports = {
     title: 'Prysm',
     tagline: 'Ethereum consensus implementation written entirely in Go.',
-    url: 'https://docs.prylabs.network',
+    url: 'https://prysm-docs-temp-migration.vercel.app',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'throw',
