@@ -15,6 +15,23 @@ module.exports = {
     customFields: {
         image: 'docs/assets/images/Prysm.svg',
         prysmVersion: prysmVersion,
+        webpack: {
+            configure: (config, isServer, utils) => {
+                // Change the assets directory name from 'assets' to your preferred name
+                config.output.assetModuleFilename = 'docs-assets/[name].[hash][ext]';
+
+                // Also update the CSS extraction path
+                const MiniCssExtractPlugin = config.plugins.find(
+                    (plugin) => plugin.constructor.name === 'MiniCssExtractPlugin'
+                );
+                if (MiniCssExtractPlugin) {
+                    MiniCssExtractPlugin.options.filename = 'docs-assets/css/[name].[contenthash:8].css';
+                    MiniCssExtractPlugin.options.chunkFilename = 'docs-assets/css/[name].[contenthash:8].chunk.css';
+                }
+
+                return config;
+            },
+        },
     },
     trailingSlash: false,
     scripts: ['https://buttons.github.io/buttons.js'],
