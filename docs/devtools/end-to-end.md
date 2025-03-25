@@ -15,7 +15,7 @@ Even the best unit tests won't prevent bugs from creeping into the system. They 
 The below command will run E2E tests using the minimal E2E configuration. It will run for 10 epochs. We additionally specify a timeout value and declare `--test_output=streamed` to output logs for all tests in real time.
 
 ```
-bazel test //testing/endtoend:go_default_test --//proto:network=minimal --test_filter=TestEndToEnd_MinimalConfig --test_env=E2E_EPOCHS=10 --test_timeout=10000 --test_output=streamed
+bazel test /testing/endtoend:go_default_test --/proto:network=minimal --test_filter=TestEndToEnd_MinimalConfig --test_env=E2E_EPOCHS=10 --test_timeout=10000 --test_output=streamed
 ```
 
 ## How are E2E tests special?
@@ -35,11 +35,11 @@ There are three main building block types from which E2E tests are constructed: 
 An E2E component is an abstract concept that represents a service that can be started and whose status can be inspected. It is defined as a Go interface type:
 
 ```
-// ComponentRunner defines an interface via which E2E component's configuration, execution and termination is managed.
+/ ComponentRunner defines an interface via which E2E component's configuration, execution and termination is managed.
 type ComponentRunner interface {
-	// Start starts a component.
+	/ Start starts a component.
 	Start(ctx context.Context) error
-	// Started checks whether an underlying component is started and ready to be queried.
+	/ Started checks whether an underlying component is started and ready to be queried.
 	Started() <-chan struct{}
 }
 ```
@@ -55,11 +55,11 @@ Running components correctly is not a simple task. We can't simply start up all 
 An E2E evaluator is a type defined as follows:
 
 ```
-// Evaluator defines the structure of the evaluators used to conduct the current beacon state during the E2E.
+/ Evaluator defines the structure of the evaluators used to conduct the current beacon state during the E2E.
 type Evaluator struct {
 	Name       string
 	Policy     func(currentEpoch types.Epoch) bool
-	Evaluation func(conn ...*grpc.ClientConn) error // A variable amount of conns is allowed to be passed in for evaluations to check all nodes if needed.
+	Evaluation func(conn ...*grpc.ClientConn) error / A variable amount of conns is allowed to be passed in for evaluations to check all nodes if needed.
 }
 ```
 
@@ -96,13 +96,13 @@ If one or more evaluators fail, we get a console output similar to the following
     --- PASS: TestEndToEnd_MinimalConfig/all_nodes_have_same_head_1 (0.10s)
     --- PASS: TestEndToEnd_MinimalConfig/metrics_check_epoch_1 (0.11s)
 FAIL
-FAIL: //testing/endtoend:go_default_test (see /home/user/.cache/bazel/_bazel_user/ec3daeb6ce0cd7052bf7c79ca31f19c6/execroot/prysm/bazel-out/k8-fastbuild-ST-02d640e6fd05/testlogs/testing/endtoend/go_default_test/test.log)
-Target //testing/endtoend:go_default_test up-to-date:
+FAIL: /testing/endtoend:go_default_test (see /home/user/.cache/bazel/_bazel_user/ec3daeb6ce0cd7052bf7c79ca31f19c6/execroot/prysm/bazel-out/k8-fastbuild-ST-02d640e6fd05/testlogs/testing/endtoend/go_default_test/test.log)
+Target /testing/endtoend:go_default_test up-to-date:
   bazel-out/k8-fastbuild-ST-02d640e6fd05/bin/testing/endtoend/go_default_test_/go_default_test
 INFO: Elapsed time: 235.338s, Critical Path: 235.16s
 INFO: 2 processes: 1 internal, 1 linux-sandbox.
 INFO: Build completed, 1 test FAILED, 2 total actions
-//testing/endtoend:go_default_test                                       FAILED in 235.1s
+/testing/endtoend:go_default_test                                       FAILED in 235.1s
   /home/user/.cache/bazel/_bazel_user/ec3daeb6ce0cd7052bf7c79ca31f19c6/execroot/prysm/bazel-out/k8-fastbuild-ST-02d640e6fd05/testlogs/testing/endtoend/go_default_test/test.log
 
 INFO: Build completed, 1 test FAILED, 2 total actions

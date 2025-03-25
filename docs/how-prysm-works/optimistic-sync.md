@@ -150,9 +150,9 @@ The `doublylinkedtree.Node` structure has a boolean `optimistic`:
 
 ```go
 type Node struct {
-	slot                     types.Slot                   // slot of the block converted to the node.
+	slot                     types.Slot                   / slot of the block converted to the node.
         ...
-	optimistic               bool                         // whether the block has been fully validated or not
+	optimistic               bool                         / whether the block has been fully validated or not
 }
 ```
 
@@ -162,16 +162,16 @@ The `protoarray.Node` structure instead has to keep track of invalid nodes as we
 
 ```go
 type Node struct {
-	slot                     types.Slot                   // slot of the block converted to the node.
+	slot                     types.Slot                   / slot of the block converted to the node.
         ...
-	status                   status                       // optimistic status of this node
+	status                   status                       / optimistic status of this node
 }
-// enum used as optimistic status of a node
+/ enum used as optimistic status of a node
 type status uint8
 const (
-	syncing status = iota // the node is optimistic
-	valid                 //fully validated node
-	invalid               // invalid execution payload
+	syncing status = iota / the node is optimistic
+	valid                 /fully validated node
+	invalid               / invalid execution payload
 )
 ```
 
@@ -247,7 +247,7 @@ The former is just a wrapper around the latter, it fetches the head root of the 
 Perhaps the most important impact that optmistic sync has on the API section, is that when the validator calls `GetBlock` to obtain a new block to propose, or when it calls `GetAttestationData` to obtain an attestation and so forth, for each of the validator duties, the corresponding RPC calls include a call to check the optimistic status of the node as follows:
 
 ```go
-// An optimistic validator MUST NOT participate in attestation. (i.e., sign across the DOMAIN_BEACON_ATTESTER, DOMAIN_SELECTION_PROOF or DOMAIN_AGGREGATE_AND_PROOF domains).
+/ An optimistic validator MUST NOT participate in attestation. (i.e., sign across the DOMAIN_BEACON_ATTESTER, DOMAIN_SELECTION_PROOF or DOMAIN_AGGREGATE_AND_PROOF domains).
 if err := vs.optimisticStatus(ctx); err != nil {
       return nil, err
 }

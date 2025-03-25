@@ -46,7 +46,7 @@ Building with Bazel requires every directory and every package to have a `BUILD.
 
 Most of the time, developers will not need to edit BUILD files themselves. Instead, they can use the following tool:
 
-    bazel run //:gazelle -- fix
+    bazel run /:gazelle -- fix
 
 which will edit all BUILD files that need to be changed based on any dependencies that were imported or any files that were added.
 
@@ -73,7 +73,7 @@ A common question we get is: "where are Prysm's Dockerfiles?". With Bazel, we ge
 
 We do not write our own Dockerfiles, as Bazel provides us a more sandboxed, simple experience with all of its benefits. To see an example use of `bazel rules docker` for how we build a particular package, see [here](https://github.com/prysmaticlabs/prysm/blob/aa389c82a157008741450ba1e04d898924734432/tools/bootnode/BUILD.bazel#L36). 
 
-To read comprehensive instructions on how to build Prysm's docker images for your own use, see [here](/docs/install/install-with-bazel).
+To read comprehensive instructions on how to build Prysm's docker images for your own use, see [here](/install/install-with-bazel).
 
 ## Building Production Releases
 
@@ -81,7 +81,7 @@ To read comprehensive instructions on how to build Prysm's docker images for you
 
 Everything in Prysm can be built with Bazel using
 
-    bazel build //...
+    bazel build /...
 
 For example, the beacon node can be built with
 

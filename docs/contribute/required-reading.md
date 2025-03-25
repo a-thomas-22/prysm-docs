@@ -27,7 +27,7 @@ This page serves material that is necessary to catch up with the current state o
 
 ### **Ethereum fundamentals**
 
-* [What is Ethereum?](http://ethdocs.org/en/latest/introduction/what-is-ethereum.html)
+* [What is Ethereum?](http:/ethdocs.org/en/latest/introduction/what-is-ethereum.html)
 * [How Does Ethereum Work Anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
 * [Ethereum Introduction](https://github.com/ethereum/wiki/wiki/Ethereum-introduction)
 * [Ethereum Frequently Asked Questions](https://github.com/ethereum/wiki/wiki/FAQs)
@@ -65,8 +65,8 @@ This page serves material that is necessary to catch up with the current state o
 
 * [Ethereum Peer to Peer Networking](https://github.com/ethereum/go-ethereum/wiki/Peer-to-Peer)
 * [How Does the P2P on Ethereum Work?](https://www.reddit.com/r/ethereum/comments/3918u0/how_does_the_p2p_network_on_ethereum_work/)
-* [How Does Kademlia Work?](http://gleamly.com/article/introduction-kademlia-dht-how-it-works)
-* [Kademlia Protocol](http://www.divms.uiowa.edu/~ghosh/kademlia.pdf)
+* [How Does Kademlia Work?](http:/gleamly.com/article/introduction-kademlia-dht-how-it-works)
+* [Kademlia Protocol](http:/www.divms.uiowa.edu/~ghosh/kademlia.pdf)
 
 ### **Ethereum Virtual Machine**
 
@@ -86,7 +86,7 @@ This page serves material that is necessary to catch up with the current state o
 
 ### **Ethereum client implementations**
 
-* [Geth](https://github.com/ethereum/go-ethereum) \(known also as go-ethereum\) is the Golang implementation of [ETH1](/docs/terminology#eth1)
+* [Geth](https://github.com/ethereum/go-ethereum) \(known also as go-ethereum\) is the Golang implementation of [ETH1](/terminology#eth1)
 * [Parity](https://github.com/paritytech/parity) the fastest and most performant implementation - written in Rust
 * [Trinity](https://github.com/ethereum/py-evm/tree/master/trinity) new project implements Ethereum in Python
 * [Cpp-Ethereum](https://github.com/ethereum/cpp-ethereum) a C++ implementation of Ethereum
@@ -111,7 +111,7 @@ After reading the sharding material for part-time contributors, it is important 
 
 * [Sharding Concepts Mental Map](https://www.mindomo.com/zh/mindmap/sharding-d7cf8b6dee714d01a77388cb5d9d2a01)
 * [Taiwan Sharding Workshop Notes](https://hackmd.io/s/HJ_BbgCFz#%E2%9F%A0-General-Introduction)
-* [Sharding Research Compendium](http://notes.ethereum.org/s/BJc_eGVFM)
+* [Sharding Research Compendium](http:/notes.ethereum.org/s/BJc_eGVFM)
 * [Torus Shaped Sharding Network](https://ethresear.ch/t/torus-shaped-sharding-network/1720/8)
 * [General Theory of Sharding](https://ethresear.ch/t/a-general-theory-of-what-quadratically-sharded-validation-is/1730/10)
 * [Sharding Design Compendium](https://ethresear.ch/t/sharding-designs-compendium/1888/25)
@@ -150,9 +150,7 @@ After reading the sharding material for part-time contributors, it is important 
 
 * [The Go Programming Language \(Only Recommended Book\)](https://www.amazon.com/Programming-Language-Addison-Wesley-Professional-Computing/dp/0134190440)
 * [Ethereum Development with Go](https://goethereumbook.org)
-* [How to Write Go Code](http://golang.org/doc/code.html)
-* [The Go Programming Language Tour](http://tour.golang.org/)
-* [Getting Started With Go](http://www.youtube.com/watch?v=2KmHtgtEZ1s)
+* [How to Write Go Code](http:/golang.org/doc/code.html)
+* [The Go Programming Language Tour](http:/tour.golang.org/)
+* [Getting Started With Go](http:/www.youtube.com/watch?v=2KmHtgtEZ1s)
 * [Go Official Website](https://golang.org/)
-
-

@@ -102,7 +102,7 @@ If you don't have the `deposit_data-XXX.json` file, you can retrieve your `withd
 
 ```rust
 curl -X 'GET' \
-  'http://YOUR_PRYSM_NODE_HOST:3500/eth/v1/beacon/states/head/validators/YOUR_VALIDATOR_INDEX_OR_PUBLIC_KEY' \
+  'http:/YOUR_PRYSM_NODE_HOST:3500/eth/v1/beacon/states/head/validators/YOUR_VALIDATOR_INDEX_OR_PUBLIC_KEY' \
   -H 'accept: application/json'
 ```
 
@@ -241,7 +241,7 @@ In this step, you will submit your signed requests to the Ethereum network using
 Once prysmctl is downloaded, you can use the `prysmctl validator withdraw` command, which will ask for terms of service acceptance and confirmation of command by providing additional flags, and also a path to the bls_to_execution_changes file from the previous step.
 
 :::info
-default beacon node REST `<node-url>` is `http://localhost:3500` aka `http://127.0.0.1:3500`
+default beacon node REST `<node-url>` is `http:/localhost:3500` aka `http:/127.0.0.1:3500`
 
 :::
 
@@ -302,14 +302,14 @@ Apply the `--verify-only` flag to the prysmctl validator withdrawal command to v
 
 You can track your withdrawal on an Ethereum Proof of Stake Block Scanner. Some examples listed below and will be based on network.
 
-- [Beaconcha.in](http://Beaconcha.in): [mainnet](https://beaconcha.in/validators/withdrawals), [sepolia](https://sepolia.beaconcha.in/validators/withdrawals), [holesky](https://holesky.beaconcha.in/validators/withdrawals)
+- [Beaconcha.in](http:/Beaconcha.in): [mainnet](https://beaconcha.in/validators/withdrawals), [sepolia](https://sepolia.beaconcha.in/validators/withdrawals), [holesky](https://holesky.beaconcha.in/validators/withdrawals)
 - [Etherscan.io](https://etherscan.io/): [mainnet](https://etherscan.io/txsBeaconWithdrawal), [sepolia](https://sepolia.etherscan.io/txsBeaconWithdrawal), [holesky](https://holesky.etherscan.io/txsBeaconWithdrawal)
 
 you can also confirm the `withdrawal_credentials` updated by querying your local beacon node. 
 
 ```rust
 curl -X 'GET' \
-  'http://YOUR_PRYSM_NODE_HOST:3500/eth/v1/beacon/states/head/validators/YOUR_VALIDATOR_INDEX' \
+  'http:/YOUR_PRYSM_NODE_HOST:3500/eth/v1/beacon/states/head/validators/YOUR_VALIDATOR_INDEX' \
   -H 'accept: application/json'
 ```
 

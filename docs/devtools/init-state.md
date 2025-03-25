@@ -61,11 +61,11 @@ FSMs are responsible for managing state transitions (fetch request queued, block
 
 ## Service Design Diagram 
 
-![Service Diagram](/docs/assets/images/service-diagram.png)
+![Service Diagram](/images/service-diagram.png)
 
 ## FSM State Transitions Diagram
 
-![FSM State Transitions Diagram](/docs/assets/images/fsm-state-trans.png)
+![FSM State Transitions Diagram](/images/fsm-state-trans.png)
 
 ## Architectural Overview
 
@@ -126,7 +126,7 @@ FSM Manager is a container used to group machines together, for easier managemen
 While event handlers operate on FSMs, they are not registered with machines themselves but with the queue, this is done for reasons of efficiency (machines are constantly removed and re-added, so are kept as simple as possible). When an event occurs (for example `Tick` event occurs every 200 milliseconds), each known FSM is passed to the corresponding event handler, depending on FSM’s current state. Here is the list of event handlers, required FSM start states and their corresponding handlers:
 
 | Event         | Required FSM state | Event Handler                                                                                                                                                             |
-| ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|---------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Tick          | New                | [Queue.onScheduleEvent()](https://github.com/prysmaticlabs/prysm/blob/ce397ce797c33dbcf77fa7670c356844ef6aad43/beacon-chain/sync/initial-sync/blocks_queue.go#L281)       |
 | Tick          | Data parsed        | [Queue.onReadyToSendEvent()](https://github.com/prysmaticlabs/prysm/blob/ce397ce797c33dbcf77fa7670c356844ef6aad43/beacon-chain/sync/initial-sync/blocks_queue.go#L334)    |
 | Tick          | Skipped            | [Queue.onProcessSkippedEvent()](https://github.com/prysmaticlabs/prysm/blob/ce397ce797c33dbcf77fa7670c356844ef6aad43/beacon-chain/sync/initial-sync/blocks_queue.go#L383) |
@@ -139,7 +139,7 @@ The above table is easy to read: for example it is easy to see that in order for
 Below is a state transition table (depending on input there might be several possible transitions for a given event -- only one of which is valid, as our FSMs are deterministic):
 
 | State/Event       | New               | Scheduled       | Data Parsed       | Skipped | Data Sent   |
-| ----------------- | ----------------- | --------------- | ----------------- | ------- | ----------- |
+|-------------------|-------------------|-----------------|-------------------|---------|-------------|
 | **Tick**          | Scheduled Skipped |                 | Data Sent Skipped | New     | New Skipped |
 | **Data Received** |                   | Data Parsed New |                   |         |             |
 
@@ -189,20 +189,20 @@ Our backtracking algorithm is pretty simple (code is abridged, see full version 
 
 
 ```go
-// findFork queries all peers that have higher head slot, in an attempt to find
-// ones that feature blocks from alternative branches. Once found, peer is
-// further queried to find a common ancestor slot.
+/ findFork queries all peers that have higher head slot, in an attempt to find
+/ ones that feature blocks from alternative branches. Once found, peer is
+/ further queried to find a common ancestor slot.
 func (f *blocksFetcher) findFork(..., slot uint64) (*forkData, error) {
-    // some details are skipped.. 
-   // Select peers that have a higher head slot, and potentially blocks 
-      // from a more favourable fork.
+    / some details are skipped.. 
+   / Select peers that have a higher head slot, and potentially blocks 
+      / from a more favourable fork.
     _, peers := f.p2p.Peers().BestNonFinalized(1, epoch+1)
     f.rand.Shuffle(len(peers), func(i, j int) {
         peers[i], peers[j] = peers[j], peers[i]
     })
 
-    // Query all found peers, stop on peer with alternative blocks, 
-      // and try backtracking.
+    / Query all found peers, stop on peer with alternative blocks, 
+      / and try backtracking.
     for i, pid := range peers {
         fork, err := f.findForkWithPeer(ctx, pid, slot)
         if err != nil {
@@ -240,13 +240,13 @@ nonSkippedSlotAfter(slot):
 And the corresponding implementation can be found in [blocks_fetcher_utils.go:nonSkippedSlotAfter](https://github.com/prysmaticlabs/prysm/blob/ce397ce797c33dbcf77fa7670c356844ef6aad43/beacon-chain/sync/initial-sync/blocks_fetcher_utils.go#L34), here it signature:
 
 ```go
-// nonSkippedSlotAfter checks slots after the given one in an attempt to find
-// a non-empty future slot.
-// For efficiency only one random slot is checked per epoch, so returned slot
-//  might not be the first non-skipped slot. This shouldn't be a problem, as 
-// in case of adversary peer, we might get incorrect data anyway, so code that
-// relies on this function must be robust enough to re-request, if no progress
-// is possible with a returned value.
+/ nonSkippedSlotAfter checks slots after the given one in an attempt to find
+/ a non-empty future slot.
+/ For efficiency only one random slot is checked per epoch, so returned slot
+/  might not be the first non-skipped slot. This shouldn't be a problem, as 
+/ in case of adversary peer, we might get incorrect data anyway, so code that
+/ relies on this function must be robust enough to re-request, if no progress
+/ is possible with a returned value.
 func (f *blocksFetcher) nonSkippedSlotAfter(slot uint64) (uint64, error) {}
 ```
 
@@ -262,25 +262,25 @@ In order to avoid being stuck with a single unresponsive peer, our first fetcher
 
 We have quite sophisticated scoring mechanisms already in place, and we’re [continuingly](https://github.com/prysmaticlabs/prysm/issues/6622) building on them. Currently, the peer scorer service is able to track peer’s performance (on how many requests, how many useful blocks -- that’s blocks advancing the head -- have been returned). Peers scoring higher will have a better chance of being selected (see [blocks_fetcher_peers.go](https://github.com/prysmaticlabs/prysm/blob/ce397ce797c33dbcf77fa7670c356844ef6aad43/beacon-chain/sync/initial-sync/blocks_fetcher_peers.go#L94) for full code):
 ```go
-// filterPeers returns a transformed list of peers, weight sorted by scores 
-// and capacity remaining.
-// List can be further constrained using peersPercentage, where only 
-// percentage of peers are returned.
+/ filterPeers returns a transformed list of peers, weight sorted by scores 
+/ and capacity remaining.
+/ List can be further constrained using peersPercentage, where only 
+/ percentage of peers are returned.
 func (f *blocksFetcher) filterPeers(... peers []peer.ID, peersPercentage float64) []peer.ID {
-    // Sort peers using both block provider score and, custom, capacity 
-      // based score (see peerFilterCapacityWeight if you want to give 
-      // different weights to provider's and capacity scores).
-    // Scores produced are used as weights, so peers are ordered 
-      // probabilistically i.e. peer with
-    // a higher score has a higher chance to end up higher in the list.
+    / Sort peers using both block provider score and, custom, capacity 
+      / based score (see peerFilterCapacityWeight if you want to give 
+      / different weights to provider's and capacity scores).
+    / Scores produced are used as weights, so peers are ordered 
+      / probabilistically i.e. peer with
+    / a higher score has a higher chance to end up higher in the list.
     scorer := f.p2p.Peers().Scorers().BlockProviderScorer()
     peers = scorer.WeightSorted(f.rand, peers, func(
         peerID peer.ID, blockProviderScore float64) float64 {
         remaining, capacity := float64(f.rateLimiter.Remaining(peerID.String())), float64(f.rateLimiter.Capacity())
-        // When capacity is close to exhaustion, allow less performant peers
-            // to take a chance.
-        // Otherwise, there's a good chance the system will be forced to 
-            // wait for the rate limiter.
+        / When capacity is close to exhaustion, allow less performant peers
+            / to take a chance.
+        / Otherwise, there's a good chance the system will be forced to 
+            / wait for the rate limiter.
         if remaining < float64(f.blocksPerSecond) {
             return 0.0
         }
@@ -301,9 +301,9 @@ Not only do we filter by score, we also take into account the remaining capacity
 Since initial synchronization interacts heavily with the P2P layer, we rely on mocks to simulate network mesh. The easiest way to start the test is to use [initializeTestServices()](https://github.com/prysmaticlabs/prysm/blob/ce397ce797c33dbcf77fa7670c356844ef6aad43/beacon-chain/sync/initial-sync/initial_sync_test.go#L74):
 
 ```go
-// Get chain, network, and database objects. 
-// You can provide blocks of your node as a second param.
-// Surrounding peers are defined in the third param.
+/ Get chain, network, and database objects. 
+/ You can provide blocks of your node as a second param.
+/ Surrounding peers are defined in the third param.
 mc, p2p, db := initializeTestServices(t, []uint64{}, []*peerData{})
 ```
 
@@ -312,17 +312,17 @@ See, [TestBlocksQueue_Loop()](https://github.com/prysmaticlabs/prysm/blob/ce397c
 If you need more control on node’s known state, or on peer’s known state, we also have the following helper methods for that:
 
 ```go
-// Setup database:
+/ Setup database:
 beaconDB := dbtest.SetupDB(t)
-// Setup network layer:
+/ Setup network layer:
 p2p := p2pt.NewTestP2P(t)
-// Setup beacon chain sequence (128 blocks):
+/ Setup beacon chain sequence (128 blocks):
 chain := extendBlockSequence(t, []*eth.SignedBeaconBlock{}, 128)
 genesisBlock := chain[0]
 require.NoError(t, beaconDB.SaveBlock(context.Background(), genesisBlock))
 genesisRoot, err := genesisBlock.Block.HashTreeRoot()
 require.NoError(t, err)
-// Initialize beacon state:
+/ Initialize beacon state:
 st := testutil.NewBeaconState()
 mc := &mock.ChainService{
     State: st,
@@ -338,11 +338,11 @@ mc := &mock.ChainService{
 Now, you’re able to populate node’s chain with any blocks you need (including forked or skipped ones):
 
 ```go
-// Populate database with blocks with part of the chain, 
-// orphaned block will be added on top.
+/ Populate database with blocks with part of the chain, 
+/ orphaned block will be added on top.
 for _, blk := range chain[1:84] {
     parentRoot := bytesutil.ToBytes32(blk.Block.ParentRoot)
-    // Save block only if the parent root is already in the database or cache.
+    / Save block only if the parent root is already in the database or cache.
     if beaconDB.HasBlock(ctx, parentRoot) || mc.HasInitSyncBlock(parentRoot) {
         require.NoError(t, beaconDB.SaveBlock(ctx, blk))
         require.NoError(t, st.SetSlot(blk.Block.Slot))
@@ -355,8 +355,8 @@ Finally, time to configure peer’s blocks:
 ```go
 finalizedSlot := uint64(82)
 finalizedEpoch := helpers.SlotToEpoch(finalizedSlot)
-// Connect peer that has all the blocks available. You can have a peer with
-// forked or missed blocks -- just update the chain param.
+/ Connect peer that has all the blocks available. You can have a peer with
+/ forked or missed blocks -- just update the chain param.
 allBlocksPeer := connectPeerHavingBlocks(t, p2p, chain, finalizedSlot, p2p.Peers())
 defer func() {
     p2p.Peers().SetConnectionState(allBlocksPeer, peers.PeerDisconnected)
@@ -366,7 +366,7 @@ defer func() {
 Since we have prepared (and customized) all the necessary mocks, time to setup queue and fetcher services:
 
 ```go
-// Setup fetcher:
+/ Setup fetcher:
 fetcher := newBlocksFetcher(
     ctx,
     &blocksFetcherConfig{
@@ -376,7 +376,7 @@ fetcher := newBlocksFetcher(
     },
 )
 fetcher.rateLimiter = leakybucket.NewCollector(6400, 6400, false)
-// Queue should be able to fetch the whole chain.
+/ Queue should be able to fetch the whole chain.
 queue := newBlocksQueue(ctx, &blocksQueueConfig{
     blocksFetcher:       fetcher,
     chain:               mc,
@@ -395,13 +395,13 @@ For even better illustration on customized setups, please, see the following tes
 To run unit tests using bazel:
 
 ```
-bazel test //beacon-chain/sync/initial-sync:go_default_test --test_arg=-test.v --test_output=streamed --test_arg=-test.failfast --nocache_test_results --test_filter=
+bazel test /beacon-chain/sync/initial-sync:go_default_test --test_arg=-test.v --test_output=streamed --test_arg=-test.failfast --nocache_test_results --test_filter=
 ```
 
 The `--test_filter` can be empty (all tests will then be run), or specify a pattern to match:
 
 | --test_filter     | Component to be tested       |
-| ----------------- | ---------------------------- |
+|-------------------|------------------------------|
 | TestBlocksQueue   | All blocks queue tests.      |
 | TestBlocksFetcher | All blocks fetcher tests.    |
 | TestStateMachine  | All FSM related tests.       |
@@ -423,7 +423,7 @@ Variations include: stopping and restarting, stopping for a long time and then r
 # Remove previous data:
 rm -r ~/prysm/beaconchaindata ~/prysm/network-keys
 # Assuming you have geth node running locally, run init-sync on holesky
-bazel run //beacon-chain -- --datadir=$HOME/prysm  \
+bazel run /beacon-chain -- --datadir=$HOME/prysm  \
   --verbosity=debug \
   --p2p-max-peers=500 \
   --execution-endpoint=$HOME/Library/Ethereum/holesky/geth.ipc \ 

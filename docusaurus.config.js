@@ -4,16 +4,16 @@ module.exports = {
     title: 'Prysm',
     tagline: 'Ethereum consensus implementation written entirely in Go.',
     url: 'https://prysm-docs-temp-migration.vercel.app',
-    baseUrl: '/prysm/',
+    baseUrl: '/prysm/docs/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'throw',
-    favicon: 'docs/assets/images/Prysm.svg',
+    favicon: 'docs/images/Prysm.svg',
     organizationName: 'Prysmatic Labs',
     projectName: 'prysm-docs',
     staticDirectories: ['static'],
 
     customFields: {
-        image: 'docs/assets/images/Prysm.svg',
+        image: 'docs/images/Prysm.svg',
         prysmVersion: prysmVersion,
     },
     trailingSlash: false,
@@ -24,8 +24,8 @@ module.exports = {
             title: "Prysm Documentation",
             logo: {
                 alt: "Prysm logo",
-                src: 'docs/assets/images/logo2.png',
-                href: '/prysm/docs/getting-started',
+                src: 'docs/images/logo2.png',
+                href: '/prysm/docs/',
             },
             items: [{
                 type: 'docsVersion',
@@ -53,8 +53,8 @@ module.exports = {
         footer: {
             logo: {
                 alt: "Prysm Eth2 Docs",
-                href: '/prysm/docs/getting-started',
-                src: 'docs/assets/images/Prysm.svg',
+                href: '/prysm/docs/',
+                src: 'docs/images/Prysm.svg',
             },
             copyright: `Copyright © ${new Date().getFullYear()} Prysmatic Labs, LLC., Validator Deposit Contract 0x00000000219ab540356cbb839cbe05303d7705fa`,
             links: [],
@@ -62,8 +62,8 @@ module.exports = {
         prism: {
             theme: require('prism-react-renderer/themes/dracula'),
         },
-        ogImage: 'docs/assets/images/Prysm.svg',
-        twitterImage: 'docs/assets/images/Prysm.svg',
+        ogImage: 'docs/images/Prysm.svg',
+        twitterImage: 'docs/images/Prysm.svg',
     },
     presets: [
         [

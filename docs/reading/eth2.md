@@ -14,7 +14,7 @@ This page serves material necessary to catch up with the current state of Ethere
 
 ### Introduction
 
-* [What is Ethereum?](http://ethdocs.org/en/latest/introduction/what-is-ethereum.html)
+* [What is Ethereum?](http:/ethdocs.org/en/latest/introduction/what-is-ethereum.html)
 * [How Does Ethereum Work Anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
 * [Ethereum Introduction](https://ethereum.org/en/what-is-ethereum/)
 * [Ethereum Foundation](https://ethereum.org/en/foundation/)
@@ -51,7 +51,7 @@ This page serves material necessary to catch up with the current state of Ethere
 
 ### Peer-to-peer networking
 
-* [Ethereum Peer to Peer Networking](https://geth.ethereum.org/docs/interface/peer-to-peer)
+* [Ethereum Peer to Peer Networking](https://geth.ethereum.org/interface/peer-to-peer)
 * [P2P Library](https://libp2p.io/)
 * [Discovery Protocol](https://github.com/ethereum/devp2p/blob/master/discv5/discv5.md)
 
@@ -87,7 +87,7 @@ This page serves material necessary to catch up with the current state of Ethere
 
 * [Sharding Concepts Mental Map](https://www.mindomo.com/zh/mindmap/sharding-d7cf8b6dee714d01a77388cb5d9d2a01)
 * [Taiwan Sharding Workshop Notes](https://hackmd.io/s/HJ_BbgCFz#%E2%9F%A0-General-Introduction)
-* [Sharding Research Compendium](http://notes.ethereum.org/s/BJc_eGVFM)
+* [Sharding Research Compendium](http:/notes.ethereum.org/s/BJc_eGVFM)
 * [Torus Shaped Sharding Network](https://ethresear.ch/t/torus-shaped-sharding-network/1720/8)
 * [General Theory of Sharding](https://ethresear.ch/t/a-general-theory-of-what-quadratically-sharded-validation-is/1730/10)
 * [Sharding Design Compendium](https://ethresear.ch/t/sharding-designs-compendium/1888/25)

@@ -6,9 +6,9 @@ sidebar_label: Nodes and networks
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ClientStackPng from '@site/static/docs/assets/images/client-stack.png';
-import NetworkPng from '@site/static/docs/assets/images/network.png';
-import NetworkLayersPng from '@site/static/docs/assets/images/network-layers.png';
+import ClientStackPng from '@site/static/images/client-stack.png';
+import NetworkPng from '@site/static/images/network.png';
+import NetworkLayersPng from '@site/static/images/network-layers.png';
 
 import {HeaderBadgesWidget} from '@site/src/components/HeaderBadgesWidget.js';
 

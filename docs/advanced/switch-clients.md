@@ -27,7 +27,7 @@ Regardless of which client you are switching to, the first step of the process w
 
 Installation documentation links for each client can be found below:
 
-- Prysm: /docs/install/install-with-script
+- Prysm: /install/install-with-script
 - Teku: https://docs.teku.consensys.io/development/get-started/install/install-binaries
 - Nimbus: https://nimbus.guide/quick-start.html  
 - Lighthouse: https://lighthouse-book.sigmaprime.io/installation.html  
@@ -39,19 +39,19 @@ Ensuring you stop and disable Prysm is critical to avoiding slashing events befo
 
 Disabling Prysm prevents it from automatically starting up again after a reboot. 
 
-Remove Prysm's validator keys as an added protection by following [these](http://localhost:3000/docs/advanced/migrating-keys#step-5--verification-and-restarting-the-validator-client) instructions.  
+Remove Prysm's validator keys as an added protection by following [these](/advanced/migrating-keys#step-5--verification-and-restarting-the-validator-client) instructions.  
 
 ### Step 3: Export slashing protection history
 
 Ensure that you stop Prysm before exporting slashing protection in order to capture all validator actions. 
 
-We have a section dedicated to exporting and importing slashing protection history [here.](/docs/wallet/slashing-protection) Follow the steps regarding exporting slashing protection history. 
+We have a section dedicated to exporting and importing slashing protection history [here.](/wallet/slashing-protection) Follow the steps regarding exporting slashing protection history. 
 
 ### Step 4: Update port forwarding
 
 This step is not required for nodes which are running on a virtual public cloud, but keep in mind - nodes will be required to run a an execution client locally post merge!  
 
-By default, Prysm uses TCP/13000 and UDP/12000. Remove those two rules and replace them with the appropriate port forwards for the client you are switching to. The process will be very similar to the steps laid out [here.](/docs/prysm-usage/p2p-host-ip#port-forwarding) 
+By default, Prysm uses TCP/13000 and UDP/12000. Remove those two rules and replace them with the appropriate port forwards for the client you are switching to. The process will be very similar to the steps laid out [here.](/prysm-usage/p2p-host-ip#port-forwarding) 
 
 Teku, Nimbus, and Lighthouse all use port 9000 for both TCP and UDP. 
 
@@ -148,5 +148,3 @@ https://chainsafe.github.io/lodestar/run/validator-management/validator-cli#vali
 Ensure your beacon node is fully synced with the network by checking your clients logs prior to starting your validator. Once it is fully synced, start the validator.  
 
 Search a block explorer like https://beaconcha.in with your validator's public key to confirm that your validator is now active!
-
-

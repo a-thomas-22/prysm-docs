@@ -29,7 +29,7 @@ The API is exposed by default on `127.0.0.1:3500`. The host can be changed by ma
 
 Performing a request is straightforward - simply concatenate the host with the port and the API's URL, providing any required URL and query parameters. As an example, the finalized state's root can be obtained using:
 ```
-http://127.0.0.1:3500/eth/v1/beacon/states/finalized/root
+http:/127.0.0.1:3500/eth/v1/beacon/states/finalized/root
 ```
 Notice that in this example the `{state_id}` URL parameter has been replaced with the literal value `finalized`. Please read the specification carefully to understand how each endpoint behaves.
 

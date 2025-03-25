@@ -4,7 +4,7 @@ title: Blobs
 sidebar_label: Blobs
 ---
 
-import BlobsPng from '@site/static/docs/assets/images/blobs.png';
+import BlobsPng from '@site/static/images/blobs.png';
 
 
 :::info

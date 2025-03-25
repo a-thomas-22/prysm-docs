@@ -15,7 +15,7 @@ Prysm can be installed on Windows, GNU/Linux, and MacOS systems with Docker. We 
 
 :::tip Not familiar with Docker? Try our quickstart
 
-This guidance is targeted at users who are already comfortable with Docker. See our [Quickstart](/docs/install/install-with-script) for beginner-friendly installation instructions.
+This guidance is targeted at users who are already comfortable with Docker. See our [Quickstart](/install/install-with-script) for beginner-friendly installation instructions.
 
 :::
 
@@ -100,9 +100,9 @@ We recommend opening up ports `tcp/13000` and `udp/12000` on your router and fir
 
 :::
 
-If you're not already running an execution node, refer to our [Quickstart](/docs/install/install-with-script) for beginner-friendly execution node installation instructions.
+If you're not already running an execution node, refer to our [Quickstart](/install/install-with-script) for beginner-friendly execution node installation instructions.
 
-Next, use Docker to tell your beacon node to connect to your local execution node. Note that `<YOUR_ETH_EXECUTION_NODE_ENDPOINT>` is either an HTTP endpoint `http://host:port` or an IPC path such as `/path/to/geth.ipc`.
+Next, use Docker to tell your beacon node to connect to your local execution node. Note that `<YOUR_ETH_EXECUTION_NODE_ENDPOINT>` is either an HTTP endpoint `http:/host:port` or an IPC path such as `/path/to/geth.ipc`.
 
 <Tabs
   groupId="os"
@@ -235,7 +235,7 @@ import FullSyncWarningPartial from '@site/docs/partials/_full-sync-warning-parti
 Check the sync status of your node with the following command:
 
 ```text
-curl http://localhost:3500/eth/v1/node/syncing
+curl http:/localhost:3500/eth/v1/node/syncing
 ```
 
 If your node is done synchronizing, you will see the response:
@@ -347,7 +347,7 @@ To interact with your beacon node through Docker, use one of the following comma
  - Restart: `docker start -ai beacon-node`
  - Delete: `docker rm beacon-node`
 
-To recreate a deleted container and refresh the chain database, issue the start command with an additional `--clear-db` parameter, where `<YOUR_ETH_EXECUTION_NODE_ENDPOINT>` is in the format of an http endpoint such as `http://host:port` (ex: `http://localhost:8551` for Geth) or an IPC path such as `/path/to/geth.ipc`:
+To recreate a deleted container and refresh the chain database, issue the start command with an additional `--clear-db` parameter, where `<YOUR_ETH_EXECUTION_NODE_ENDPOINT>` is in the format of an http endpoint such as `http:/host:port` (ex: `http:/localhost:8551` for Geth) or an IPC path such as `/path/to/geth.ipc`:
 
 
 <Tabs

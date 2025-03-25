@@ -32,14 +32,14 @@ The following command starts a beacon node with checkpoint sync configured to pu
   <TabItem value="win">
 
 ```
-./prysm.bat beacon-chain --checkpoint-sync-url=http://localhost:3500 --genesis-beacon-api-url=http://localhost:3500
+./prysm.bat beacon-chain --checkpoint-sync-url=http:/localhost:3500 --genesis-beacon-api-url=http:/localhost:3500
 ```
     
   </TabItem>
   <TabItem value="others">
 
 ```bash
-./prysm.sh beacon-chain --checkpoint-sync-url=http://localhost:3500 --genesis-beacon-api-url=http://localhost:3500
+./prysm.sh beacon-chain --checkpoint-sync-url=http:/localhost:3500 --genesis-beacon-api-url=http:/localhost:3500
 ```
 
   </TabItem>
@@ -88,15 +88,15 @@ remote: Total 167386 (delta 118), reused 220 (delta 93), pack-reused 167054
 Receiving objects: 100% (167386/167386), 154.30 MiB | 39.56 MiB/s, done.
 Resolving deltas: 100% (127482/127482), done.
 
-$ go run github.com/prysmaticlabs/prysm/v3/cmd/prysmctl checkpoint-sync download --beacon-node-host=http://localhost:3500
+$ go run github.com/prysmaticlabs/prysm/v3/cmd/prysmctl checkpoint-sync download --beacon-node-host=http:/localhost:3500
 ```
 
 You should see the following output if your export was successful:
 
 ```bash
-INFO[0000] requesting http://localhost:3500/eth/v2/debug/beacon/states/finalized
+INFO[0000] requesting http:/localhost:3500/eth/v2/debug/beacon/states/finalized
 INFO[0001] detected supported config in remote finalized state, name=holesky, fork=bellatrix
-INFO[0001] requesting http://localhost:3500/eth/v2/beacon/blocks/0x766bdce4c70b6ee991bd68f8065d73e3990895b1953f6b931baae0502d8cbfcf
+INFO[0001] requesting http:/localhost:3500/eth/v2/beacon/blocks/0x766bdce4c70b6ee991bd68f8065d73e3990895b1953f6b931baae0502d8cbfcf
 INFO[0001] BeaconState slot=3041920, Block slot=3041920
 INFO[0001] BeaconState htr=0x34ebc10f191706afbbccb0c3c39679632feef0453fe842bda264e432e9e31011d, Block state_root=0x34ebc10f191706afbbccb0c3c39679632feef0453fe842bda264e432e9e31011
 INFO[0001] BeaconState latest_block_header htr=0x766bdce4c70b6ee991bd68f8065d73e3990895b1953f6b931baae0502d8cbfcfd, block htr=0x766bdce4c70b6ee991bd68f8065d73e3990895b1953f6b931baae0502d8cbfcf
@@ -107,7 +107,7 @@ INFO[0001] saved ssz-encoded state to to state_holesky_bellatrix_3041920-0x34ebc
 The two exported `*.ssz` files are your `BeaconState` and `SignedBeaconBlock` files. Their filenames combine their file type (`state`, `block`), the network (`holesky`), the fork name (`bellatrix`), the slot (`2397120`) and the state or block root in hex encoding. The `checkpoint save` command doesn't export the required genesis state, but the genesis state can be downloaded via `curl` or `wget` using the following command:
 
 ```
-curl -H "Accept: application/octet-stream"  http://localhost:3500/eth/v1/debug/beacon/states/genesis > genesis.ssz
+curl -H "Accept: application/octet-stream"  http:/localhost:3500/eth/v1/debug/beacon/states/genesis > genesis.ssz
 ```
 
 You can also just manually download the genesis state from GitHub: [holesky](https://github.com/eth-clients/holesky/blob/main/custom_config_data/genesis.ssz) | [Sepolia](https://github.com/eth-clients/sepolia/blob/main/metadata/genesis.ssz)
@@ -146,7 +146,7 @@ Use the following command to start your beacon node with checkpoint sync configu
 
 To verify that the checkpoint state you're using is legitimate, follow these steps after starting your beacon node with checkpoint sync enabled:
 
-1. Navigate to `http://localhost:3500/eth/v1/beacon/headers/finalized` using your browser.
+1. Navigate to `http:/localhost:3500/eth/v1/beacon/headers/finalized` using your browser.
 2. Find the `slot` number and `state_root` value.
 3. Use a trusted blockchain explorer to verify the `state_root`. To be extra safe, follow this procedure using multiple blockchain explorers. Using `beaconcha.in` as an example, navigate to one of the following pages, replacing `SLOT` with the `slot` you pulled from your browser:
    - **Sepolia**: https://sepolia.beaconcha.in/slot/SLOT

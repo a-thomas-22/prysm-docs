@@ -8,9 +8,9 @@ import {HeaderBadgesWidget} from '@site/src/components/HeaderBadgesWidget.js';
 
 <HeaderBadgesWidget />
 
-BoltDB is the persistent [key-value store](/docs/terminology#key-value-store) database utilised by the Prysm client. A piece of software that Prysm initially inherited from its origins as a [Geth](https://geth.ethereum.org/) fork was its storage engine, LevelDB. As a simple embedded [key-value store](/docs/terminology#key-value-store) written in Go, LevelDB worked well; however, after observing a number of corruption-related issues, it was decided to survey some other options for the project.
+BoltDB is the persistent [key-value store](/terminology#key-value-store) database utilised by the Prysm client. A piece of software that Prysm initially inherited from its origins as a [Geth](https://geth.ethereum.org/) fork was its storage engine, LevelDB. As a simple embedded [key-value store](/terminology#key-value-store) written in Go, LevelDB worked well; however, after observing a number of corruption-related issues, it was decided to survey some other options for the project.
 
-![BoltDB](/docs/assets/images/boltdb.png)
+![BoltDB](/images/boltdb.png)
 
 #### Why BoltDB?
 
@@ -20,23 +20,23 @@ After testing and benchmarking all three options, Bolt was decided upon as the b
 
 ## BoltDB functionality
 
-All database related logic is contained in the `db/` directory of the Prysm repository. Given that BoltDB is a [key-value store](/docs/terminology#key-value-store) backend, 'buckets' \(akin to tables in relational databases\) are required for data storage. Blocks, transactions, state, proposals and attestations are are all defined in these buckets, in what is known as 'bucket data'.
+All database related logic is contained in the `db/` directory of the Prysm repository. Given that BoltDB is a [key-value store](/terminology#key-value-store) backend, 'buckets' \(akin to tables in relational databases\) are required for data storage. Blocks, transactions, state, proposals and attestations are are all defined in these buckets, in what is known as 'bucket data'.
 
 ### Example: bucket creation
 
 A user wants to create a new bucket named `myNewStuffBucket` to the database. To perform this action, the bucket data must be added to the template found in `db/schema.go`, like so:
 
 ```go
-// The Schema will define how to store and retrieve data from the db.
-// Currently we store blocks by prefixing `block` to their hash and
-// using that as the key to store blocks.
-// `block` + hash -> block
-//
-// We store the crystallized state using the crystallized state lookup key, and
-// also the genesis block using the genesis lookup key.
-// The canonical head is stored using the canonical head lookup key.
+/ The Schema will define how to store and retrieve data from the db.
+/ Currently we store blocks by prefixing `block` to their hash and
+/ using that as the key to store blocks.
+/ `block` + hash -> block
+/
+/ We store the crystallized state using the crystallized state lookup key, and
+/ also the genesis block using the genesis lookup key.
+/ The canonical head is stored using the canonical head lookup key.
 
-// The fields below define the suffix of keys in the db.
+/ The fields below define the suffix of keys in the db.
 var (
     attestationBucket    = []byte("attestation-bucket")
     blockBucket          = []byte("block-bucket")
@@ -49,7 +49,7 @@ var (
 The newly created bucket is added to the `NewDB` constructor in `db/db.go`, like so:
 
 ```go
-// NewDB initializes a new DB. If the genesis block and states do not exist, this method creates it.
+/ NewDB initializes a new DB. If the genesis block and states do not exist, this method creates it.
 func NewDB(dirPath string) (*BeaconDB, error) {
     if err := os.MkdirAll(dirPath, 0700); err != nil {
         return nil, err

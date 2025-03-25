@@ -18,14 +18,14 @@ Prysm supports the use of Web3Signer with the following flags:
 
 example:
 ```
---validators-external-signer-url=http://localhost:9000
+--validators-external-signer-url=http:/localhost:9000
 ```
 
 the flag is also aliased to `--remote-signer-url`
 
 example:
 ```
---remote-signer-url=http://localhost:9000
+--remote-signer-url=http:/localhost:9000
 ```
 
 It is recommended to use `https` for the Web3Signer url. Prysm currently supports one to one on Web3Signer and does not support multiple key management systems with the same validator client. Prysm does not support partial local and partial remote key management. Web3signer does not support authentication between the validator client and the signer.
@@ -68,12 +68,12 @@ if `--validators-external-signer-public-keys` is not defined the validator clien
 
 example:
 ```
-validator --web --validators-external-signer-url=http://localhost:9000
+validator --web --validators-external-signer-url=http:/localhost:9000
 ```
 
 The `--web` flag will enable validator client APIs as well as the web ui ( not supported for web3signer ). A JWT token ( found on the second line of the auth-token file) will be generated in the prysm default wallet directory otherwise defined by `--wallet-dir` flag. the token will also be printed in the console:
 ```
-[2022-04-15 14:07:39]  INFO rpc: http://127.0.0.1:7500/initialize?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.ck3J6tcvHcI74IiFjyJqcBH-MmNAq-fMr0ncyZkGvFM
+[2022-04-15 14:07:39]  INFO rpc: http:/127.0.0.1:7500/initialize?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.ck3J6tcvHcI74IiFjyJqcBH-MmNAq-fMr0ncyZkGvFM
 ```
 The token needs to be copied and set in the header of the API request:
 ```

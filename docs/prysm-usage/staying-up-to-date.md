@@ -16,9 +16,9 @@ This section outlines the step-by-step process for how to keep Prysm up to date,
 
 There are three main ways of installing Prysm:
 
-* [Using the Prysm installation script (Recommended)](/docs/install/install-with-script)
-* [Using Docker](/docs/install/install-with-docker)
-* [Building from source with Bazel (Advanced)](/docs/install/install-with-bazel)
+* [Using the Prysm installation script (Recommended)](/install/install-with-script)
+* [Using Docker](/install/install-with-docker)
+* [Building from source with Bazel (Advanced)](/install/install-with-bazel)
 
 ## Recommended versions
 
@@ -322,7 +322,7 @@ Next, we recommend backing up any important important folders such as your beaco
 Next up, run our database rollback command to make sure your database is going to be compatible with your new version. Find the folder where your `validator.db` file lives, then run:
 
 ```
-bazel run //cmd/validator:validator -- db migrate down --datadir=/path/to/folder
+bazel run /cmd/validator:validator -- db migrate down --datadir=/path/to/folder
 ```
 
 Then do <strong>git checkout <PrysmVersion/></strong> Afterwards, you can re-run your beacon chain and validator as you ran them earlier with Bazel.
@@ -411,7 +411,7 @@ Next, we recommend backing up any important important folders such as your beaco
 Next up, run our database rollback command to make sure your database is going to be compatible with your new version. Find the folder where your `validator.db` file lives, then run:
 
 ```
-bazel run //cmd/validator:validator -- db migrate down --datadir=/path/to/folder
+bazel run /cmd/validator:validator -- db migrate down --datadir=/path/to/folder
 ```
 
 Then do <strong>git checkout <PrysmVersion/></strong> Afterwards, you can re-run your beacon chain and validator as you ran them earlier with Bazel.

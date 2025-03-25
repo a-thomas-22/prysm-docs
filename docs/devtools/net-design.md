@@ -100,15 +100,15 @@ package p2p;
 syntax = "proto3";
 
 message Hello {
-    bytes fork_version = 1; // bytes4
-    bytes finalized_root = 2; // bytes32
+    bytes fork_version = 1; / bytes4
+    bytes finalized_root = 2; / bytes32
     uint64 finalized_epoch = 3; 
-    bytes head_root = 4; // bytes32
+    bytes head_root = 4; / bytes32
     uint64 head_slot = 5;
 }
 
 message Goodbye {
-    Reason reason = 1; // uint64
+    Reason reason = 1; / uint64
 
     enum Reason {
         UNKNOWN = 0;
@@ -121,7 +121,7 @@ message Goodbye {
 }
 
 message BeaconBlocksRequest {
-    bytes head_block_root = 1; // bytes32
+    bytes head_block_root = 1; / bytes32
     uint64 head_slot = 2;
     uint64 count = 3;
     uint64 step = 4;
@@ -132,7 +132,7 @@ message BeaconBlocksResponse {
 }
 
 message RecentBeaconBlocksRequest {
-    repeated bytes block_roots = 1; // []bytes32, Array of hash tree roots.
+    repeated bytes block_roots = 1; / []bytes32, Array of hash tree roots.
 }
 ```
 
@@ -194,7 +194,7 @@ This sync mode requests subsets of the chain to multiple peers, perhaps even wit
 For example, if we were to request blocks 10 through 25 from 4 peers:
 
 | **Peer #** | **Batch Block Requests** |
-| ---------- | ------------------------ |
+|------------|--------------------------|
 | Peer 1     | 10, 14, 18, 22           |
 | Peer 2     | 11, 15, 19, 23           |
 | Peer 3     | 12, 16, 20, 24           |
@@ -214,7 +214,7 @@ For example, if we were to request blocks 10 through 25 from 4 peers:
 In the event that there is a failure for any subset of the requested range, the remaining blocks will be split across the remaining peers. For example, if peer 3 was disconnected without responding, we would round robin block requests for blocks [12, 24], [16], and [20]. 
 
 | Peer # | Batch Block Requests          |
-| ------ | ----------------------------- |
+|--------|-------------------------------|
 | Peer 1 | 10, 14, 18, 22                |
 | Peer 2 | 11, 15, 19, 23                |
 | Peer 3 | 12, 16, 20, 24 (disconnected) |
@@ -311,11 +311,11 @@ GossipSub as our pubsub library is mostly implemented already with the [libp2p G
 
 **Parameters**
 
-| Parameter Name     | Description                                                                               | Value |
-| ------------------ | ----------------------------------------------------------------------------------------- | ----- |
-| D                  | Topic stable mesh target count                                                            | 6     |
-| D_low              | Topic stable mesh low watermark                                                           | 4     |
-| D_high             | Topic stable mesh high watermark                                                          | 12    |
+| Parameter Name | Description                      | Value |
+|----------------|----------------------------------|-------|
+| D              | Topic stable mesh target count   | 6     |
+| D_low          | Topic stable mesh low watermark  | 4     |
+| D_high         | Topic stable mesh high watermark | 12    |
 | D_lazy             | Gossip target                                                                             | 6     |  |
 | fanout_ttl         | TTL for fanout maps for topics we are not subscribed to but have published to, in seconds | 60    |
 | gossip_advertise   | Number of windows to gossip about                                                         | 3     |
@@ -331,7 +331,7 @@ Libp2p’s GossipSub implementation has the concept of [topic validators](https:
 
 **Proposal 1: Use [PubSub.RegisterTopicValidator](https://godoc.org/github.com/libp2p/go-libp2p-pubsub#PubSub.RegisterTopicValidator)**
 
-![proposal1](/docs/assets/images/proposal1.png)
+![proposal1](/images/proposal1.png)
 
 Built in functionality within the existing API will allow for arbitrary validation of incoming messages before automatically propagating to network peers. The benefit here is that the original message is relayed automatically with some knowledge of the originating message. In other words, the library could be clever enough not to propagate the message back to the originating peer.
 
@@ -340,7 +340,7 @@ Built in functionality within the existing API will allow for arbitrary validati
 
 A cost effective way to handle validation of message contents would be to register a validator that rejects everything by always returning “false” and shift this logic into the message handler. The handler will already have a decoded copy of the message and can check the contents for validity before calling Broadcast(msg) to propagate through the network. An alternative would be to registry a chain of adapters like we have in the current implementation.
 
-![proposal2](/docs/assets/images/proposal2.png)
+![proposal2](/images/proposal2.png)
 
 **GossipSub Message Handlers** 
 
@@ -415,9 +415,9 @@ func (rs *RegularSync) receiveAttestation(msg p2p.Message) error {
   resp := msg.Data.(*pb.AttestationResponse)
   att := resp.Attestation
 
-  // Send att to blockchain service to run fork choice
+  / Send att to blockchain service to run fork choice
   If err := rs.chainService.ReceiveAttestation(ctx, att); err != nil {..}
-  // Send att to operation service for inclusion to attestation pool
+  / Send att to operation service for inclusion to attestation pool
   rs.operationService.IncomingAttFeed().send(att)
 
 
@@ -427,7 +427,7 @@ func (rs *RegularSync) receiveBlock(msg p2p.Message) error {
   resp := msg.Data.(*pb.BlockResponse)
   blk := resp.Block
 
-  // Send blk to blockchain service to run state transition and fork choice
+  / Send blk to blockchain service to run state transition and fork choice
   If err := rs.chainService.ReceiveBlock(ctx, blk); err != nil {..}
 
 ```
