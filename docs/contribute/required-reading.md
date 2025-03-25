@@ -111,7 +111,7 @@ After reading the sharding material for part-time contributors, it is important 
 
 * [Sharding Concepts Mental Map](https://www.mindomo.com/zh/mindmap/sharding-d7cf8b6dee714d01a77388cb5d9d2a01)
 * [Taiwan Sharding Workshop Notes](https://hackmd.io/s/HJ_BbgCFz#%E2%9F%A0-General-Introduction)
-* [Sharding Research Compendium](http:/notes.ethereum.org/s/BJc_eGVFM)
+* [Sharding Research Compendium](http://notes.ethereum.org/s/BJc_eGVFM)
 * [Torus Shaped Sharding Network](https://ethresear.ch/t/torus-shaped-sharding-network/1720/8)
 * [General Theory of Sharding](https://ethresear.ch/t/a-general-theory-of-what-quadratically-sharded-validation-is/1730/10)
 * [Sharding Design Compendium](https://ethresear.ch/t/sharding-designs-compendium/1888/25)
