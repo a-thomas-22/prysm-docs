@@ -14,7 +14,7 @@ This page serves material necessary to catch up with the current state of Ethere
 
 ### Introduction
 
-* [What is Ethereum?](http:/ethdocs.org/en/latest/introduction/what-is-ethereum.html)
+* [What is Ethereum?](http://ethdocs.org/en/latest/introduction/what-is-ethereum.html)
 * [How Does Ethereum Work Anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
 * [Ethereum Introduction](https://ethereum.org/en/what-is-ethereum/)
 * [Ethereum Foundation](https://ethereum.org/en/foundation/)

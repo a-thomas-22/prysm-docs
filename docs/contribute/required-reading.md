@@ -27,7 +27,7 @@ This page serves material that is necessary to catch up with the current state o
 
 ### **Ethereum fundamentals**
 
-* [What is Ethereum?](http:/ethdocs.org/en/latest/introduction/what-is-ethereum.html)
+* [What is Ethereum?](http://ethdocs.org/en/latest/introduction/what-is-ethereum.html)
 * [How Does Ethereum Work Anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
 * [Ethereum Introduction](https://github.com/ethereum/wiki/wiki/Ethereum-introduction)
 * [Ethereum Frequently Asked Questions](https://github.com/ethereum/wiki/wiki/FAQs)
