@@ -6,7 +6,7 @@ sidebar_label: Configure MEV Builder
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import BuilderPng from '@site/static/docs/img/builder.png';
+import BuilderPng from '@site/static/docs/assets/images/builder.png';
 
 :::caution
 

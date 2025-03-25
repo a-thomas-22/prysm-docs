@@ -10,7 +10,7 @@ import {HeaderBadgesWidget} from '@site/src/components/HeaderBadgesWidget.js';
 
 This section discusses the lifecycle of a [validator](validator-clients.md) as defined by [Ethereum consensus specifications](https://github.com/ethereum/consensus-specs).
 
-![Validator Lifecycle Diagram](/docs/img/validator-lifecycle.png)
+![Validator Lifecycle Diagram](/docs/assets/images/validator-lifecycle.png)
 
 :::info
 

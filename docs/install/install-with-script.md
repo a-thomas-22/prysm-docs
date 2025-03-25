@@ -6,7 +6,7 @@ sidebar_label: "Quickstart: Run a node"
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import ClientStackPng from '@site/static/docs/img/client-stack.png';
+import ClientStackPng from '@site/static/docs/assets/images/client-stack.png';
 
 import {HeaderBadgesWidget} from '@site/src/components/HeaderBadgesWidget.js';
 

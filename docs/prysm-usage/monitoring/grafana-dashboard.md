@@ -10,7 +10,7 @@ import {HeaderBadgesWidget} from '@site/src/components/HeaderBadgesWidget.js';
 
 [Grafana](https://grafana.com/) is an open-source data metrics tool that is used to aggregate large amounts of data into a comprehensive visual dashboard for easy analysis. This section includes instructions for installing Grafana on the local machine and configuring Telegram or Discord alerts for monitoring validator status on-the-go.
 
-![Grafana dashboard for prysm node and validator](/docs/img/dashboard_overview.png "Grafana dashboard for prysm node and validator")
+![Grafana dashboard for prysm node and validator](/docs/assets/images/dashboard_overview.png "Grafana dashboard for prysm node and validator")
 
 To view your validator's details, visit [beaconcha.in/validators](https://beaconcha.in/validators).
 
@@ -73,7 +73,7 @@ or do so in a terminal by issuing the command:
   > **NOTICE:** Prometheus' default data logging time is 15 days. To extend dashboard statistics to 31 days, add `--storage.tsdb.retention.time=31d` to this startup command.
 
 5. Navigate to [http://localhost:9090/graph](http://localhost:9090/graph) in a browser. It will present a page similar to this:
-![Prometheus page](/docs/img/prometheus_page.png "Prometheus page")
+![Prometheus page](/docs/assets/images/prometheus_page.png "Prometheus page")
 
 Take note of the `validator_statuses` and `total_voted_target_balances`, as they are required later.
 

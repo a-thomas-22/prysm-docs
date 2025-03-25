@@ -12,7 +12,7 @@ Although [beacon nodes](./beacon-node) handle network synchronisation, drawing c
 
 As mentioned, validators have two responsibilities: to [propose](/docs/terminology#propose) \(or produce\) blocks known as beacon blocks, which contain consensus information about shards across the network, or to [attest](/docs/terminology#attest) \(or vote on\) the validity of blocks that have already been produced.
 
-![Validator](/docs/img/prysm-validator.png)
+![Validator](/docs/assets/images/prysm-validator.png)
 
 ## How does it work?
 
