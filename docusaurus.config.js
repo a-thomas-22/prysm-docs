@@ -16,7 +16,7 @@ module.exports = {
         image: 'docs/images/Prysm.svg',
         prysmVersion: prysmVersion,
     },
-    trailingSlash: false,
+    trailingSlash: true,
     scripts: ['https://buttons.github.io/buttons.js'],
 
     themeConfig: {
