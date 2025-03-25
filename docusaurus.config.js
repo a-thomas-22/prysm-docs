@@ -29,7 +29,7 @@ module.exports = {
             items: [{
                 type: 'docsVersion',
                 position: 'left',
-                to: 'https://github.com/prysmaticlabs/prysm/releases/tag/'+prysmVersion,
+                to: 'https://github.com/prysmaticlabs/prysm/releases/tag/' + prysmVersion,
                 label: prysmVersion,
             },
             {
@@ -75,7 +75,7 @@ module.exports = {
                     showLastUpdateAuthor: false,
                     breadcrumbs: false,
                     sidebarPath: require.resolve('./sidebars.json'),
-                    editUrl: 'https://github.com/prysmaticlabs/documentation/edit/master/website/',
+                    editUrl: 'https://github.com/prysmaticlabs/documentation/edit/master/',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),

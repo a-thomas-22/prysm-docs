@@ -1,4 +1,5 @@
 {
+  "name": "prysm-documentation",
   "scripts": {
     "docusaurus": "docusaurus",
     "examples": "docusaurus examples",
