@@ -223,7 +223,7 @@ import TabItem from '@theme/TabItem';
           </TabItem>
         </Tabs>
       </TabItem>
-      <p>See Geth's <a href='https://geth.ethereum.org/interface/command-line-options'>command-line options</a> for parameter definitions.</p>
+      <p>See Geth's <a href='https://geth.ethereum.org/docs/interface/command-line-options'>command-line options</a> for parameter definitions.</p>
     </Tabs>
   </TabItem>
 </Tabs>

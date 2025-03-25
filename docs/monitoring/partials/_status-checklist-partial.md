@@ -72,7 +72,7 @@ import TabItem from '@theme/TabItem';
                     <p>You should periodically see more than a few peers reported through Besu's log output. Refer to Besu's <a href='https://besu.hyperledger.org/en/stable/public-networks/how-to/connect/manage-peers/#monitor-peer-connections'>Monitor peer connections</a> documentation for more detailed peer health monitoring guidance.</p>
                     </TabItem>
                     <TabItem value="geth">
-                    <p>You should periodically see more than a few peers reported through Geth's log output. Look for output in the format of <code>peercount=12</code>. Refer to Geth's <a href='https://geth.ethereum.org/interface/peer-to-peer'>Connecting To The Network</a> documentation for more detailed peer health monitoring guidance.</p>
+                    <p>You should periodically see more than a few peers reported through Geth's log output. Look for output in the format of <code>peercount=12</code>. Refer to Geth's <a href='https://geth.ethereum.org/docs/interface/peer-to-peer'>Connecting To The Network</a> documentation for more detailed peer health monitoring guidance.</p>
                     </TabItem>
                 </Tabs>
             </div>

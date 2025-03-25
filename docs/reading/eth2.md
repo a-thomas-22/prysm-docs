@@ -51,7 +51,7 @@ This page serves material necessary to catch up with the current state of Ethere
 
 ### Peer-to-peer networking
 
-* [Ethereum Peer to Peer Networking](https://geth.ethereum.org/interface/peer-to-peer)
+* [Ethereum Peer to Peer Networking](https://geth.ethereum.org/docs/interface/peer-to-peer)
 * [P2P Library](https://libp2p.io/)
 * [Discovery Protocol](https://github.com/ethereum/devp2p/blob/master/discv5/discv5.md)
 
