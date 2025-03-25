@@ -2,6 +2,7 @@
 id: getting-started
 title:  Table of contents
 sidebar_label: Table of contents
+slug: /
 ---
 
 import {HeaderBadgesWidget} from '@site/src/components/HeaderBadgesWidget.js';

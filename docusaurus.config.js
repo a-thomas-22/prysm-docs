@@ -71,7 +71,7 @@ module.exports = {
             {
                 docs: {
                     path: './docs',
-                    routeBasePath: 'docs',
+                    routeBasePath: '/',
                     showLastUpdateTime: false,
                     showLastUpdateAuthor: false,
                     breadcrumbs: false,
