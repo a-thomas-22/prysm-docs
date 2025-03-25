@@ -6,7 +6,8 @@
   "trailingSlash": false,
   "cleanUrls": true,
   "redirects": [
-    { "source": "/docs", "destination": "/docs/getting-started", "permanent": true },
-    { "source": "/", "destination": "/docs/getting-started", "permanent": true }
+    { "source": "/prysm/docs", "destination": "/prysm/docs/getting-started", "permanent": true },
+    { "source": "/prysm", "destination": "/prysm/docs/getting-started", "permanent": true },
+    { "source": "/", "destination": "/prysm/docs/getting-started", "permanent": true }
   ]
 }
