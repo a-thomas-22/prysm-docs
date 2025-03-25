@@ -16,9 +16,9 @@ To view your validator's details, visit [beaconcha.in/validators](https://beacon
 
 ### Getting account metrics
  Ensure metrics have been activated by visiting the following dashboards:
-  * **Node** metrics are found at [http:/localhost:8080/metrics](http:/localhost:8080/metrics)
-  * **Validator** metrics are found at [http:/localhost:8081/metrics](http:/localhost:8081/metrics)
-  * **Slasher** metrics are found at [http:/localhost:8082/metrics](http:/localhost:8081/metrics)
+  * **Node** metrics are found at [http://localhost:8080/metrics](http://localhost:8080/metrics)
+  * **Validator** metrics are found at [http://localhost:8081/metrics](http://localhost:8081/metrics)
+  * **Slasher** metrics are found at [http://localhost:8082/metrics](http://localhost:8081/metrics)
 
 If you are using a custom `--monitoring-host` for these processes, such as an IP address, then just change `localhost` to the custom host you are using. 
 
@@ -72,7 +72,7 @@ or do so in a terminal by issuing the command:
  
   > **NOTICE:** Prometheus' default data logging time is 15 days. To extend dashboard statistics to 31 days, add `--storage.tsdb.retention.time=31d` to this startup command.
 
-5. Navigate to [http:/localhost:9090/graph](http:/localhost:9090/graph) in a browser. It will present a page similar to this:
+5. Navigate to [http://localhost:9090/graph](http://localhost:9090/graph) in a browser. It will present a page similar to this:
 ![Prometheus page](/images/prometheus_page.png "Prometheus page")
 
 Take note of the `validator_statuses` and `total_voted_target_balances`, as they are required later.
@@ -92,9 +92,9 @@ Grafana must now be installed to provide the graphical component of the data ana
 
 1. [Download Grafana](https://grafana.com/grafana/download) and install it.
 
-2. Open [http:/localhost:3000](http:/localhost:3000) in a browser. By default, the username and the password to this panel are both ‘admin’.
+2. Open [http://localhost:3000](http://localhost:3000) in a browser. By default, the username and the password to this panel are both ‘admin’.
 
-3. Create a data source and choose Prometheus, then enter in the URL field [http:/localhost:9090](http:/localhost:9090). 
+3. Create a data source and choose Prometheus, then enter in the URL field [http://localhost:9090](http://localhost:9090). 
 
 4. Click on **Save & Test**. 
 
@@ -126,7 +126,7 @@ This section is currently out of date. Refer to Grafana's [The new unified alert
 
 2. To complete the set up, a Discord server (and a text channel available) as well as a Webhook URL are required. For instructions on setting up a Discord's Webhooks, see [this section](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) of their documentation.
   
-3. Navigate back to http:/localhost:3000 and enter the Webhook URL in the Discord notification settings panel. 
+3. Navigate back to http://localhost:3000 and enter the Webhook URL in the Discord notification settings panel. 
 
 4. Click **Send Test**, which will push a confirmation message to the Discord channel.
 

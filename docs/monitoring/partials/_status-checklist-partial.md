@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
                 {label: 'Geth', value: 'geth'}
                 ]}>
                 <TabItem value="nethermind">
-                    <p>You can <a href='https://docs.nethermind.io/nethermind/ethereum-client/monitoring-node-health'>check your Nethermind execution node's sync status</a> by navigating to <a href='http:/localhost:8545/healthchecks-ui'><code>http:/localhost:8545/healthchecks-ui</code></a> or by running <code>curl localhost:8545/health</code> from a separate terminal window. A sync status of <code>false</code> indicates that your node is fully synced. </p>
+                    <p>You can <a href='https://docs.nethermind.io/nethermind/ethereum-client/monitoring-node-health'>check your Nethermind execution node's sync status</a> by navigating to <a href='http://localhost:8545/healthchecks-ui'><code>http://localhost:8545/healthchecks-ui</code></a> or by running <code>curl localhost:8545/health</code> from a separate terminal window. A sync status of <code>false</code> indicates that your node is fully synced. </p>
                 </TabItem>
                 <TabItem value="besu">
                     <Tabs className="tabgroup-with-label" groupId="os" defaultValue="others" values={[
@@ -37,8 +37,8 @@ import TabItem from '@theme/TabItem';
                         {label: 'Windows', value: 'win'}
                         ]}>
                         <TabItem className="unclickable-element" value="label"></TabItem>
-                        <TabItem value="others"><p>You can <a href='https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_syncing'>check your Besu execution node's sync status</a> by running <code>curl -H 'Content-Type: application/json' -X POST http:/localhost:8545 -d '&#123;"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":51&#125;'</code> from a separate terminal window. A sync status of <code>false</code> indicates that your node is fully synced.</p></TabItem>
-                        <TabItem value="win"><p>You can <a href='https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_syncing'>check your Besu execution node's sync status</a> by running <code>curl -H "Content-Type: application/json" -X POST http:/localhost:8545 -d "&#123;""jsonrpc"":""2.0"",""method"":""eth_syncing"",""params"":[],""id"":51&#125;"</code> from a separate terminal window. A sync status of <code>false</code> indicates that your node is fully synced.</p></TabItem>
+                        <TabItem value="others"><p>You can <a href='https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_syncing'>check your Besu execution node's sync status</a> by running <code>curl -H 'Content-Type: application/json' -X POST http://localhost:8545 -d '&#123;"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":51&#125;'</code> from a separate terminal window. A sync status of <code>false</code> indicates that your node is fully synced.</p></TabItem>
+                        <TabItem value="win"><p>You can <a href='https://besu.hyperledger.org/en/stable/Reference/API-Methods/#eth_syncing'>check your Besu execution node's sync status</a> by running <code>curl -H "Content-Type: application/json" -X POST http://localhost:8545 -d "&#123;""jsonrpc"":""2.0"",""method"":""eth_syncing"",""params"":[],""id"":51&#125;"</code> from a separate terminal window. A sync status of <code>false</code> indicates that your node is fully synced.</p></TabItem>
                     </Tabs>
                 </TabItem>
                 <TabItem value="geth">
@@ -48,8 +48,8 @@ import TabItem from '@theme/TabItem';
                         {label: 'Windows', value: 'win'}
                         ]}>
                         <TabItem className="unclickable-element" value="label"></TabItem>
-                        <TabItem value="others"><p>You can check your Geth execution node's sync status by running <code>geth attach</code> (IPC) or <code>geth attach http:/localhost:8545</code> (HTTP) from a separate terminal. Then type <code>eth.syncing</code>. A sync status of <code>false</code> indicates that your node is fully synced.</p></TabItem>
-                        <TabItem value="win"><p>You can check your Geth execution node's sync status by running <code>geth attach ipc:\\.\pipe\geth.ipc</code> (IPC) or <code>geth attach http:/localhost:8545</code> (HTTP) from a separate terminal. Then type <code>eth.syncing</code>. A sync status of <code>false</code> indicates that your node is fully synced.</p></TabItem>
+                        <TabItem value="others"><p>You can check your Geth execution node's sync status by running <code>geth attach</code> (IPC) or <code>geth attach http://localhost:8545</code> (HTTP) from a separate terminal. Then type <code>eth.syncing</code>. A sync status of <code>false</code> indicates that your node is fully synced.</p></TabItem>
+                        <TabItem value="win"><p>You can check your Geth execution node's sync status by running <code>geth attach ipc:\\.\pipe\geth.ipc</code> (IPC) or <code>geth attach http://localhost:8545</code> (HTTP) from a separate terminal. Then type <code>eth.syncing</code>. A sync status of <code>false</code> indicates that your node is fully synced.</p></TabItem>
                     </Tabs>
                 </TabItem>
                 </Tabs>
@@ -66,7 +66,7 @@ import TabItem from '@theme/TabItem';
                     {label: 'Geth', value: 'geth'}
                     ]}>
                     <TabItem value="nethermind">
-                    <p>You can <a href='https://docs.nethermind.io/nethermind/ethereum-client/monitoring-node-health'>check your Nethermind execution node's peer connectivity</a> by navigating to <a href='http:/localhost:8545/healthchecks-ui'><code>http:/localhost:8545/healthchecks-ui</code></a> or by running <code>curl localhost:8545/health</code> a separate terminal window. A health status of <code>Healthy</code> indicates that your node is connected to peers.</p>
+                    <p>You can <a href='https://docs.nethermind.io/nethermind/ethereum-client/monitoring-node-health'>check your Nethermind execution node's peer connectivity</a> by navigating to <a href='http://localhost:8545/healthchecks-ui'><code>http://localhost:8545/healthchecks-ui</code></a> or by running <code>curl localhost:8545/health</code> a separate terminal window. A health status of <code>Healthy</code> indicates that your node is connected to peers.</p>
                     </TabItem>
                     <TabItem value="besu">
                     <p>You should periodically see more than a few peers reported through Besu's log output. Refer to Besu's <a href='https://besu.hyperledger.org/en/stable/public-networks/how-to/connect/manage-peers/#monitor-peer-connections'>Monitor peer connections</a> documentation for more detailed peer health monitoring guidance.</p>
@@ -97,7 +97,7 @@ import TabItem from '@theme/TabItem';
             <div className='input-container'><input id="st-4" type='checkbox'/><span className='done'></span></div>
             <div className='guidance-container'>
                 <label htmlFor="st-4">6. Beacon node sync status</label>
-                <p>You can check your beacon node's <a href='https://ethereum.github.io/beacon-APIs/?urls.primaryName=dev#/Node/getSyncingStatus'>sync status</a> by running <code>curl http:/localhost:3500/eth/v1/node/syncing | jq</code> from a separate terminal window. When you see <code>"is_syncing":false</code>, your beacon node is fully synchronized with the beacon chain. When you see <code>"is_optimistic":false</code>, your beacon node sees that your execution node is either 1) not yet started, 2) hasn't synced past the merge block or 3) fully synchronized with the execution-layer blockchain.
+                <p>You can check your beacon node's <a href='https://ethereum.github.io/beacon-APIs/?urls.primaryName=dev#/Node/getSyncingStatus'>sync status</a> by running <code>curl http://localhost:3500/eth/v1/node/syncing | jq</code> from a separate terminal window. When you see <code>"is_syncing":false</code>, your beacon node is fully synchronized with the beacon chain. When you see <code>"is_optimistic":false</code>, your beacon node sees that your execution node is either 1) not yet started, 2) hasn't synced past the merge block or 3) fully synchronized with the execution-layer blockchain.
                 </p>
             </div>
         </div>
@@ -105,7 +105,7 @@ import TabItem from '@theme/TabItem';
             <div className='input-container'><input id="st-5" type='checkbox'/><span className='done'></span></div>
             <div className='guidance-container'>
                 <label htmlFor="st-5">7. Beacon node peer connectivity</label>
-                <p>You should periodically see more than a few peers reported through your beacon node's log output. Look for output in the format of <code>peers=12</code>. You can issue <code>curl http:/localhost:8080/healthz</code> from a separate terminal window to check connectivity status. If you see <code>currentConnectionError: no contract code at given address</code>, your execution node may still be syncing. Otherwise, if you don't see any errors, your beacon node is connected to peers.</p>
+                <p>You should periodically see more than a few peers reported through your beacon node's log output. Look for output in the format of <code>peers=12</code>. You can issue <code>curl http://localhost:8080/healthz</code> from a separate terminal window to check connectivity status. If you see <code>currentConnectionError: no contract code at given address</code>, your execution node may still be syncing. Otherwise, if you don't see any errors, your beacon node is connected to peers.</p>
             </div>
         </div>
         <div className='task'>
@@ -119,7 +119,7 @@ import TabItem from '@theme/TabItem';
             <div className='input-container'><input id="st-7" type='checkbox'/><span className='done'></span></div>
             <div className='guidance-container'>
                 <label htmlFor="st-7">9. Beacon node ↔ execution node connectivity</label>
-                <p>In a separate terminal window, run <code>curl http:/localhost:3500/eth/v1/node/syncing</code>. 
+                <p>In a separate terminal window, run <code>curl http://localhost:3500/eth/v1/node/syncing</code>. 
                 If the response shows `"el_offline": false`, it can be interpreted as the "EN-BN connection is healthy". However, if you see `"is_optimistic": true`, it may indicate that the execution node is still syncing or experiencing other issues. For more information about this endpoint, visit <a href='https://ethereum.github.io/beacon-APIs/?urls.primaryName=dev#/Node/getSyncingStatus'>the beacon API documentation</a>.</p>
             </div>
         </div>

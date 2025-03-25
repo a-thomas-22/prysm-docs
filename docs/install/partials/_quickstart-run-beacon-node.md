@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
         ]}>
           <TabItem value="jwt">
             <p>Navigate to your <code>consensus</code> directory and run the following command to start your beacon node that connects to your local execution node by replacing <code>&lt;PATH_TO_JWT_FILE&gt;</code> by the path to the JWT file generated during the previous step:</p>
-            <pre><code>prysm.bat beacon-chain --execution-endpoint=http:/localhost:8551 --mainnet --jwt-secret=&lt;PATH_TO_JWT_FILE&gt; --checkpoint-sync-url=https://beaconstate.info --genesis-beacon-api-url=https://beaconstate.info</code></pre>
+            <pre><code>prysm.bat beacon-chain --execution-endpoint=http://localhost:8551 --mainnet --jwt-secret=&lt;PATH_TO_JWT_FILE&gt; --checkpoint-sync-url=https://beaconstate.info --genesis-beacon-api-url=https://beaconstate.info</code></pre>
           </TabItem>
           <TabItem value="ipc">
             <p>Navigate to your <code>consensus</code> directory and run the following command to start your beacon node that connects to your local execution node by replacing <code>&lt;PATH_TO_IPC_FILE&gt;</code> by the path to the IPC file the execution client created for you during the previous step:</p>
@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
           {label: 'JWT', value: 'jwt'},
           {label: 'IPC', value: 'ipc'}
         ]}>
-          <TabItem value="jwt"><pre><code>prysm.bat beacon-chain --execution-endpoint=http:/localhost:8551 --sepolia --jwt-secret=&lt;PATH_TO_JWT_FILE&gt;  --checkpoint-sync-url=https://sepolia.beaconstate.info --genesis-beacon-api-url=https://sepolia.beaconstate.info</code></pre></TabItem>
+          <TabItem value="jwt"><pre><code>prysm.bat beacon-chain --execution-endpoint=http://localhost:8551 --sepolia --jwt-secret=&lt;PATH_TO_JWT_FILE&gt;  --checkpoint-sync-url=https://sepolia.beaconstate.info --genesis-beacon-api-url=https://sepolia.beaconstate.info</code></pre></TabItem>
           <TabItem value="ipc"><pre><code>prysm.bat beacon-chain --execution-endpoint=&lt;PATH_TO_IPC_FILE&gt; --sepolia --checkpoint-sync-url=https://sepolia.beaconstate.info --genesis-beacon-api-url=https://sepolia.beaconstate.info</code></pre></TabItem>
         </Tabs>
       </TabItem>
@@ -43,7 +43,7 @@ import TabItem from '@theme/TabItem';
           {label: 'JWT', value: 'jwt'},
           {label: 'IPC', value: 'ipc'}
         ]}>
-          <TabItem value="jwt"><pre><code>prysm.bat beacon-chain --execution-endpoint=http:/localhost:8551 --holesky --jwt-secret=&lt;PATH_TO_JWT_FILE&gt;  --checkpoint-sync-url=https://holesky.beaconstate.info --genesis-beacon-api-url=https://holesky.beaconstate.info</code></pre></TabItem>
+          <TabItem value="jwt"><pre><code>prysm.bat beacon-chain --execution-endpoint=http://localhost:8551 --holesky --jwt-secret=&lt;PATH_TO_JWT_FILE&gt;  --checkpoint-sync-url=https://holesky.beaconstate.info --genesis-beacon-api-url=https://holesky.beaconstate.info</code></pre></TabItem>
           <TabItem value="ipc"><pre><code>prysm.bat beacon-chain --execution-endpoint=&lt;PATH_TO_IPC_FILE&gt; --holesky --checkpoint-sync-url=https://holesky.beaconstate.info --genesis-beacon-api-url=https://holesky.beaconstate.info</code></pre></TabItem>
         </Tabs>
       </TabItem>
@@ -62,7 +62,7 @@ import TabItem from '@theme/TabItem';
         ]}>
           <TabItem value="jwt">
             <p>Navigate to your <code>consensus</code> directory and run the following command to start your beacon node that connects to your local execution node by replacing <code>&lt;PATH_TO_JWT_FILE&gt;</code> by the path to the JWT file generated during the previous step:</p>
-            <pre><code>./prysm.sh beacon-chain --execution-endpoint=http:/localhost:8551 --mainnet --jwt-secret=&lt;PATH_TO_JWT_FILE&gt; --checkpoint-sync-url=https://beaconstate.info --genesis-beacon-api-url=https://beaconstate.info</code></pre>
+            <pre><code>./prysm.sh beacon-chain --execution-endpoint=http://localhost:8551 --mainnet --jwt-secret=&lt;PATH_TO_JWT_FILE&gt; --checkpoint-sync-url=https://beaconstate.info --genesis-beacon-api-url=https://beaconstate.info</code></pre>
           </TabItem>
           <TabItem value="ipc">
             <p>Navigate to your <code>consensus</code> directory and run the following command to start your beacon node that connects to your local execution node by replacing <code>&lt;PATH_TO_IPC_FILE&gt;</code> by the path to the IPC file the execution client created for you during the previous step:</p>
@@ -75,7 +75,7 @@ import TabItem from '@theme/TabItem';
           {label: 'JWT', value: 'jwt'},
           {label: 'IPC', value: 'ipc'}
         ]}>
-          <TabItem value="jwt"><pre><code>./prysm.sh beacon-chain --execution-endpoint=http:/localhost:8551 --sepolia --jwt-secret=&lt;PATH_TO_JWT_FILE&gt;  --checkpoint-sync-url=https://sepolia.beaconstate.info --genesis-beacon-api-url=https://sepolia.beaconstate.info</code></pre></TabItem>
+          <TabItem value="jwt"><pre><code>./prysm.sh beacon-chain --execution-endpoint=http://localhost:8551 --sepolia --jwt-secret=&lt;PATH_TO_JWT_FILE&gt;  --checkpoint-sync-url=https://sepolia.beaconstate.info --genesis-beacon-api-url=https://sepolia.beaconstate.info</code></pre></TabItem>
           <TabItem value="ipc"><pre><code>./prysm.sh beacon-chain --execution-endpoint=&lt;PATH_TO_IPC_FILE&gt; --sepolia --checkpoint-sync-url=https://sepolia.beaconstate.info --genesis-beacon-api-url=https://sepolia.beaconstate.info</code></pre></TabItem>
           </Tabs>
       </TabItem>
@@ -84,7 +84,7 @@ import TabItem from '@theme/TabItem';
           {label: 'JWT', value: 'jwt'},
           {label: 'IPC', value: 'ipc'}
         ]}>
-          <TabItem value="jwt"><pre><code>./prysm.sh beacon-chain --execution-endpoint=http:/localhost:8551 --holesky --jwt-secret=&lt;PATH_TO_JWT_FILE&gt;  --checkpoint-sync-url=https://holesky.beaconstate.info --genesis-beacon-api-url=https://holesky.beaconstate.info</code></pre></TabItem>
+          <TabItem value="jwt"><pre><code>./prysm.sh beacon-chain --execution-endpoint=http://localhost:8551 --holesky --jwt-secret=&lt;PATH_TO_JWT_FILE&gt;  --checkpoint-sync-url=https://holesky.beaconstate.info --genesis-beacon-api-url=https://holesky.beaconstate.info</code></pre></TabItem>
           <TabItem value="ipc"><pre><code>./prysm.sh beacon-chain --execution-endpoint=&lt;PATH_TO_IPC_FILE&gt; --holesky --checkpoint-sync-url=https://holesky.beaconstate.info --genesis-beacon-api-url=https://holesky.beaconstate.info</code></pre></TabItem>
         </Tabs>
       </TabItem>

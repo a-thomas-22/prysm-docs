@@ -45,7 +45,7 @@
         <code>could not check configuration values between execution and consensus client error: timeout from http.Client</code><br/><br/>
         <code>403 signature invalid</code><br/><br/>
         <code>Could not connect to execution client endpoint" error="could not make initial request to verify execution chain ID: 401 Unauthorized</code><br/><br/>
-        <code>level=error msg="Could not connect to execution client endpoint" error="could not make initial request to verify execution chain ID: Post "http:/localhost:8551/": dial tcp 127.0.0.1:8551: connect: connection refused" prefix=powchain</code><br/><br/>
+        <code>level=error msg="Could not connect to execution client endpoint" error="could not make initial request to verify execution chain ID: Post "http://localhost:8551/": dial tcp 127.0.0.1:8551: connect: connection refused" prefix=powchain</code><br/><br/>
         <code>warning msg="Batch is not processed" error="could not process block in batch: timeout from http.Client: received an undefined ee error. </code><br/><br/>
         <code>warning msg="Batch is not processed" error="could not process block in batch: got an unexpected error in JSON-RPC response: 403 Forbidden: signature is invalid</code>
       </td>

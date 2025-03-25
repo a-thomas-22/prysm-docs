@@ -78,11 +78,11 @@ import MultidimensionalContentControlsPartial from '@site/docs/partials/_multidi
 <TabItem value="win">
 
 
-| IP type | Command                                                           |
-|---------|-------------------------------------------------------------------|
-| Private | <code>ipconfig &#124; findstr /i "IPv4 Address"</code>            |
-| Public  | Visit [v4.ident.me](http:/v4.ident.me/) or run `curl v4.ident.me` |
-| Router  | <code>ipconfig &#124; findstr /i "Gateway"</code>                 |
+| IP type | Command                                                            |
+|---------|--------------------------------------------------------------------|
+| Private | <code>ipconfig &#124; findstr /i "IPv4 Address"</code>             |
+| Public  | Visit [v4.ident.me](http://v4.ident.me/) or run `curl v4.ident.me` |
+| Router  | <code>ipconfig &#124; findstr /i "Gateway"</code>                  |
 
   
 </TabItem>
@@ -92,7 +92,7 @@ import MultidimensionalContentControlsPartial from '@site/docs/partials/_multidi
 | IP type | Command                                                                                                |
 |---------|--------------------------------------------------------------------------------------------------------|
 | Private | <code>ifconfig &#124; grep "inet " &#124; grep -v 127.0.0.1</code>                                     |
-| Public  | Visit [v4.ident.me](http:/v4.ident.me/) or run `curl v4.ident.me`                                      |
+| Public  | Visit [v4.ident.me](http://v4.ident.me/) or run `curl v4.ident.me`                                     |
 | Router  | <code>ip route &#124; grep default</code> (Linux) <code>netstat -nr &#124; grep default</code> (MacOS) |
 
 
@@ -110,7 +110,7 @@ import MultidimensionalContentControlsPartial from '@site/docs/partials/_multidi
 To ensure that other peer nodes can discover your node, you may need to forward ports `13000/TCP` and `12000/UDP` using your router's admin interface. Every router is different, but the procedure is usually something like this:
 
 1. Determine your router's IP address
-2. Log in to your router's browser-based admin interface (usually something like http:/192.168.1.1)
+2. Log in to your router's browser-based admin interface (usually something like http://192.168.1.1)
 3. Look for `Port Forwarding`.
 4. Configure a port forwarding rule with the following values:
     - External port: `13000`

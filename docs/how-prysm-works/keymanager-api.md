@@ -17,7 +17,7 @@ A JWT token is needed to use the Keymanager APIs. This token is automatically ge
 The JWT token itself is directly displayed at the Validator Client start as well, in this log:
 
 
-    INFO rpc: http:/127.0.0.1:7500/initialize?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.ck3J6tcvHcI74IiFjyJqcBH-MmNAq-fMr0ncyZkGvFM
+    INFO rpc: http://127.0.0.1:7500/initialize?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.ck3J6tcvHcI74IiFjyJqcBH-MmNAq-fMr0ncyZkGvFM
 
 
 The token needs to be copied and set in the header of the API request:

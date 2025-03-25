@@ -114,7 +114,7 @@ To run a beacon node, you'll need access to an execution node. See [Configure an
 
 ## Run a beacon node
 
-Note: `<YOUR_ETH_EXECUTION_NODE_ENDPOINT>` is in the format of an http endpoint such as `http:/host:port` (ex: `http:/localhost:8545` for geth) or an IPC path such as `/path/to/geth.ipc`.
+Note: `<YOUR_ETH_EXECUTION_NODE_ENDPOINT>` is in the format of an http endpoint such as `http://host:port` (ex: `http://localhost:8545` for geth) or an IPC path such as `/path/to/geth.ipc`.
 
 import MultidimensionalContentControlsPartial from '@site/docs/partials/_multidimensional-content-controls-partial.md';
 

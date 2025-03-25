@@ -108,10 +108,10 @@ bazel run //cmd/beacon-chain -- db restore --restore-source-file=/path/to/backup
 
 Add the following flags to your validator client:
 
-- `--enable-db-backup-webhook`: Serve an http server to initiate database backups. The handler is served on the validator client's monitoring host and port. Default endpoint is `http:/127.0.0.1:8081/db/backup` if the flag is enabled.
+- `--enable-db-backup-webhook`: Serve an http server to initiate database backups. The handler is served on the validator client's monitoring host and port. Default endpoint is `http://127.0.0.1:8081/db/backup` if the flag is enabled.
 - `--db-backup-output-dir`: Folder path to where backups will be output to, such as `/path/to/mybackups`.
 
-Now, your validator client will expose an HTTP endpoint `http:/monitoringhost:monitoringport/db/backup`, which is `http:/127.0.0.1:8081/db/backup` by default. You can hit this endpoint using curl or any other tool you prefer, and a backup will initiate which will be output to your `--db-backup-output-dir` path.
+Now, your validator client will expose an HTTP endpoint `http://monitoringhost:monitoringport/db/backup`, which is `http://127.0.0.1:8081/db/backup` by default. You can hit this endpoint using curl or any other tool you prefer, and a backup will initiate which will be output to your `--db-backup-output-dir` path.
 
 
 ### Restoring from a backup

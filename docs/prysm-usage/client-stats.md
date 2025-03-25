@@ -35,23 +35,23 @@ Or without the machine name:
 
 To collect metrics from your validator node, assuming that your validator is running on localhost:
 
-    client-stats --validator-metrics-url=http:/localhost:8081/metrics --clientstats-api-url=https://beaconcha.in/api/v1/stats/{apikey}/{machineName}
+    client-stats --validator-metrics-url=http://localhost:8081/metrics --clientstats-api-url=https://beaconcha.in/api/v1/stats/{apikey}/{machineName}
 
 To collect metrics from your beacon node, also assuming that the beacon node is running on localhost:
 
-    client-stats --beacon-node-metrics-url=http:/localhost:8080/metrics --clientstats-api-url=https://beaconcha.in/api/v1/stats/{apikey}/{machineName}
+    client-stats --beacon-node-metrics-url=http://localhost:8080/metrics --clientstats-api-url=https://beaconcha.in/api/v1/stats/{apikey}/{machineName}
 
 To collect metrics from both, also assuming that the validator and beacon node are running on localhost:
 
-    client-stats --validator-metrics-url=http:/localhost:8081/metrics --beacon-node-metrics-url=http:/localhost:8080/metrics --clientstats-api-url=https://beaconcha.in/api/v1/stats/{apikey}/{machineName}
+    client-stats --validator-metrics-url=http://localhost:8081/metrics --beacon-node-metrics-url=http://localhost:8080/metrics --clientstats-api-url=https://beaconcha.in/api/v1/stats/{apikey}/{machineName}
 
 To run client-stats from `prysm.sh` or `prysm.bat`, while adjusting the parameters to `client-stats` as per the above:
 
-    prysm.sh client-stats --validator-metrics-url=http:/localhost:8081/metrics --beacon-node-metrics-url=http:/localhost:8080/metrics --clientstats-api-url=https://beaconcha.in/api/v1/stats/{apikey}/{machineName}
+    prysm.sh client-stats --validator-metrics-url=http://localhost:8081/metrics --beacon-node-metrics-url=http://localhost:8080/metrics --clientstats-api-url=https://beaconcha.in/api/v1/stats/{apikey}/{machineName}
 
 or
 
-    prysm.bat client-stats --validator-metrics-url=http:/localhost:8081/metrics --beacon-node-metrics-url=http:/localhost:8080/metrics --clientstats-api-url=https://beaconcha.in/api/v1/stats/{apikey}/{machineName}
+    prysm.bat client-stats --validator-metrics-url=http://localhost:8081/metrics --beacon-node-metrics-url=http://localhost:8080/metrics --clientstats-api-url=https://beaconcha.in/api/v1/stats/{apikey}/{machineName}
 
 If you see an error message that `PROCESS can be beacon-chain, validator, or slasher.`, you need to manually update the `prysm.sh` or `prysm.bat` file to
 its latest version, see [download instructions](/install/install-with-script).
