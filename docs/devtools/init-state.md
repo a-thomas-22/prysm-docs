@@ -395,7 +395,7 @@ For even better illustration on customized setups, please, see the following tes
 To run unit tests using bazel:
 
 ```
-bazel test /beacon-chain/sync/initial-sync:go_default_test --test_arg=-test.v --test_output=streamed --test_arg=-test.failfast --nocache_test_results --test_filter=
+bazel test //beacon-chain/sync/initial-sync:go_default_test --test_arg=-test.v --test_output=streamed --test_arg=-test.failfast --nocache_test_results --test_filter=
 ```
 
 The `--test_filter` can be empty (all tests will then be run), or specify a pattern to match:

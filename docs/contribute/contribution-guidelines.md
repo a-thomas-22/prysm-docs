@@ -93,25 +93,25 @@ You can also find various other types of IDE support for Bazel in the official B
 
 All code we check into our repo needs to have sufficient tests to ensure it is maintainable and works as expected. We use bazel to run all of our test suites in Prysm. If there is a particular subfolder you want to test, such as `beacon-chain/node`, you can run the command:
 
-    bazel test /beacon-chain/node:go_default_test
+    bazel test //beacon-chain/node:go_default_test
 
 For running a specific test, for example, a test called `TestNodeStart_Ok` inside of `beacon-chain/node`, you can use Bazel to filter it out:
 
-    bazel test /beacon-chain/node:go_default_test --test_filter TestNodeStart_Ok
+    bazel test //beacon-chain/node:go_default_test --test_filter TestNodeStart_Ok
 
 To display logs while running the test, you can add the `--test_output streamed` option, such as:
 
-    bazel test /beacon-chain/node:go_default_test --test_output streamed --test_filter TestNodeStart_Ok
+    bazel test //beacon-chain/node:go_default_test --test_output streamed --test_filter TestNodeStart_Ok
 
 To run all tests recursively under a directory, you can use the `...` syntax. The following example runs all tests recursively under the `validator/client` directory:
 
-    bazel test /validator/client/...
+    bazel test //validator/client/...
 
 For the list of all available flags to the `bazel test` command, you can see the reference documentation [here](https://docs.bazel.build/versions/master/command-line-reference.html#test).
 
 You can also run our full, end-to-end test suite with:
 
-    bazel test /testing/endtoend:go_default_test
+    bazel test //testing/endtoend:go_default_test
 
 
 #### Adding dependencies
