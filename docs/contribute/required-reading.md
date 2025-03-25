@@ -65,8 +65,8 @@ This page serves material that is necessary to catch up with the current state o
 
 * [Ethereum Peer to Peer Networking](https://github.com/ethereum/go-ethereum/wiki/Peer-to-Peer)
 * [How Does the P2P on Ethereum Work?](https://www.reddit.com/r/ethereum/comments/3918u0/how_does_the_p2p_network_on_ethereum_work/)
-* [How Does Kademlia Work?](http:/gleamly.com/article/introduction-kademlia-dht-how-it-works)
-* [Kademlia Protocol](http:/www.divms.uiowa.edu/~ghosh/kademlia.pdf)
+* [How Does Kademlia Work?](http://gleamly.com/article/introduction-kademlia-dht-how-it-works)
+* [Kademlia Protocol](http://www.divms.uiowa.edu/~ghosh/kademlia.pdf)
 
 ### **Ethereum Virtual Machine**
 
@@ -150,7 +150,7 @@ After reading the sharding material for part-time contributors, it is important 
 
 * [The Go Programming Language \(Only Recommended Book\)](https://www.amazon.com/Programming-Language-Addison-Wesley-Professional-Computing/dp/0134190440)
 * [Ethereum Development with Go](https://goethereumbook.org)
-* [How to Write Go Code](http:/golang.org/doc/code.html)
-* [The Go Programming Language Tour](http:/tour.golang.org/)
-* [Getting Started With Go](http:/www.youtube.com/watch?v=2KmHtgtEZ1s)
+* [How to Write Go Code](http://golang.org/doc/code.html)
+* [The Go Programming Language Tour](http://tour.golang.org/)
+* [Getting Started With Go](http://www.youtube.com/watch?v=2KmHtgtEZ1s)
 * [Go Official Website](https://golang.org/)
