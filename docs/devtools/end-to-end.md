@@ -37,9 +37,9 @@ An E2E component is an abstract concept that represents a service that can be st
 ```
 // ComponentRunner defines an interface via which E2E component's configuration, execution and termination is managed.
 type ComponentRunner interface {
-	/ Start starts a component.
+	// Start starts a component.
 	Start(ctx context.Context) error
-	/ Started checks whether an underlying component is started and ready to be queried.
+	// Started checks whether an underlying component is started and ready to be queried.
 	Started() <-chan struct{}
 }
 ```

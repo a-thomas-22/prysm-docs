@@ -150,9 +150,9 @@ The `doublylinkedtree.Node` structure has a boolean `optimistic`:
 
 ```go
 type Node struct {
-	slot                     types.Slot                   / slot of the block converted to the node.
+	slot                     types.Slot                   // slot of the block converted to the node.
         ...
-	optimistic               bool                         / whether the block has been fully validated or not
+	optimistic               bool                         // whether the block has been fully validated or not
 }
 ```
 
@@ -162,16 +162,16 @@ The `protoarray.Node` structure instead has to keep track of invalid nodes as we
 
 ```go
 type Node struct {
-	slot                     types.Slot                   / slot of the block converted to the node.
+	slot                     types.Slot                   // slot of the block converted to the node.
         ...
-	status                   status                       / optimistic status of this node
+	status                   status                       // optimistic status of this node
 }
 // enum used as optimistic status of a node
 type status uint8
 const (
-	syncing status = iota / the node is optimistic
-	valid                 /fully validated node
-	invalid               / invalid execution payload
+	syncing status = iota // the node is optimistic
+	valid                 // fully validated node
+	invalid               // invalid execution payload
 )
 ```
 

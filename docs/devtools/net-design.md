@@ -100,15 +100,15 @@ package p2p;
 syntax = "proto3";
 
 message Hello {
-    bytes fork_version = 1; / bytes4
-    bytes finalized_root = 2; / bytes32
+    bytes fork_version = 1; // bytes4
+    bytes finalized_root = 2; // bytes32
     uint64 finalized_epoch = 3; 
-    bytes head_root = 4; / bytes32
+    bytes head_root = 4; // bytes32
     uint64 head_slot = 5;
 }
 
 message Goodbye {
-    Reason reason = 1; / uint64
+    Reason reason = 1; // uint64
 
     enum Reason {
         UNKNOWN = 0;
@@ -121,7 +121,7 @@ message Goodbye {
 }
 
 message BeaconBlocksRequest {
-    bytes head_block_root = 1; / bytes32
+    bytes head_block_root = 1; // bytes32
     uint64 head_slot = 2;
     uint64 count = 3;
     uint64 step = 4;
@@ -132,7 +132,7 @@ message BeaconBlocksResponse {
 }
 
 message RecentBeaconBlocksRequest {
-    repeated bytes block_roots = 1; / []bytes32, Array of hash tree roots.
+    repeated bytes block_roots = 1; // []bytes32, Array of hash tree roots.
 }
 ```
 
@@ -415,9 +415,9 @@ func (rs *RegularSync) receiveAttestation(msg p2p.Message) error {
   resp := msg.Data.(*pb.AttestationResponse)
   att := resp.Attestation
 
-  / Send att to blockchain service to run fork choice
+  // Send att to blockchain service to run fork choice
   If err := rs.chainService.ReceiveAttestation(ctx, att); err != nil {..}
-  / Send att to operation service for inclusion to attestation pool
+  // Send att to operation service for inclusion to attestation pool
   rs.operationService.IncomingAttFeed().send(att)
 
 
@@ -427,7 +427,7 @@ func (rs *RegularSync) receiveBlock(msg p2p.Message) error {
   resp := msg.Data.(*pb.BlockResponse)
   blk := resp.Block
 
-  / Send blk to blockchain service to run state transition and fork choice
+  // Send blk to blockchain service to run state transition and fork choice
   If err := rs.chainService.ReceiveBlock(ctx, blk); err != nil {..}
 
 ```

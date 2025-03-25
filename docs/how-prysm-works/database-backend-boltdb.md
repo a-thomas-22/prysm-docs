@@ -27,16 +27,16 @@ All database related logic is contained in the `db/` directory of the Prysm repo
 A user wants to create a new bucket named `myNewStuffBucket` to the database. To perform this action, the bucket data must be added to the template found in `db/schema.go`, like so:
 
 ```go
-/ The Schema will define how to store and retrieve data from the db.
-/ Currently we store blocks by prefixing `block` to their hash and
-/ using that as the key to store blocks.
-/ `block` + hash -> block
-/
-/ We store the crystallized state using the crystallized state lookup key, and
-/ also the genesis block using the genesis lookup key.
-/ The canonical head is stored using the canonical head lookup key.
+// The Schema will define how to store and retrieve data from the db.
+// Currently we store blocks by prefixing `block` to their hash and
+// using that as the key to store blocks.
+// `block` + hash -> block
+//
+// We store the crystallized state using the crystallized state lookup key, and
+// also the genesis block using the genesis lookup key.
+// The canonical head is stored using the canonical head lookup key.
 
-/ The fields below define the suffix of keys in the db.
+// The fields below define the suffix of keys in the db.
 var (
     attestationBucket    = []byte("attestation-bucket")
     blockBucket          = []byte("block-bucket")

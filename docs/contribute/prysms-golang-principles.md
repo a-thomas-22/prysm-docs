@@ -77,8 +77,8 @@ func UpdateBeaconState(currentState *pb.BeaconState, blockCh chan<- *types.Block
       }
 
       newState := executeStateTransition(currentState, block)
-      / BAD: This can lead to a critical, inconsistent state! The line below will save to DB
-      / DB even if block failed processing conditions!
+      // BAD: This can lead to a critical, inconsistent state! The line below will save to DB
+      // DB even if block failed processing conditions!
       db.SaveState(newState)
     }
   }
@@ -94,7 +94,7 @@ func UpdateBeaconState(currentState *pb.BeaconState, blockCh chan<- *types.Block
     case block := <-blockCh:
       if err := processBlock(block); err != nil {
         log.Errorf("block failed processing conditions: %v", err)
-        / GOOD: The line below won't save to DB if block failed processing conditions.
+        // GOOD: The line below won't save to DB if block failed processing conditions.
         continue
       }
 
