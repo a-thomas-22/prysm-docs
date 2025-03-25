@@ -322,7 +322,7 @@ Next, we recommend backing up any important important folders such as your beaco
 Next up, run our database rollback command to make sure your database is going to be compatible with your new version. Find the folder where your `validator.db` file lives, then run:
 
 ```
-bazel run /cmd/validator:validator -- db migrate down --datadir=/path/to/folder
+bazel run //cmd/validator:validator -- db migrate down --datadir=/path/to/folder
 ```
 
 Then do <strong>git checkout <PrysmVersion/></strong> Afterwards, you can re-run your beacon chain and validator as you ran them earlier with Bazel.
@@ -411,7 +411,7 @@ Next, we recommend backing up any important important folders such as your beaco
 Next up, run our database rollback command to make sure your database is going to be compatible with your new version. Find the folder where your `validator.db` file lives, then run:
 
 ```
-bazel run /cmd/validator:validator -- db migrate down --datadir=/path/to/folder
+bazel run //cmd/validator:validator -- db migrate down --datadir=/path/to/folder
 ```
 
 Then do <strong>git checkout <PrysmVersion/></strong> Afterwards, you can re-run your beacon chain and validator as you ran them earlier with Bazel.
@@ -455,5 +455,3 @@ Then change all your docker run commands to use that version tag. For example, i
 ### Downgrading between major version bumps
 
 For **major version bumps** such as from <PrysmVersion/> to <PrysmVersion majorOverride="4"/>, you cannot downgrade as these are meant to be backwards incompatible changes.
-
-

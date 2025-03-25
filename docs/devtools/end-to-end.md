@@ -35,7 +35,7 @@ There are three main building block types from which E2E tests are constructed: 
 An E2E component is an abstract concept that represents a service that can be started and whose status can be inspected. It is defined as a Go interface type:
 
 ```
-/ ComponentRunner defines an interface via which E2E component's configuration, execution and termination is managed.
+// ComponentRunner defines an interface via which E2E component's configuration, execution and termination is managed.
 type ComponentRunner interface {
 	/ Start starts a component.
 	Start(ctx context.Context) error
@@ -55,7 +55,7 @@ Running components correctly is not a simple task. We can't simply start up all 
 An E2E evaluator is a type defined as follows:
 
 ```
-/ Evaluator defines the structure of the evaluators used to conduct the current beacon state during the E2E.
+// Evaluator defines the structure of the evaluators used to conduct the current beacon state during the E2E.
 type Evaluator struct {
 	Name       string
 	Policy     func(currentEpoch types.Epoch) bool

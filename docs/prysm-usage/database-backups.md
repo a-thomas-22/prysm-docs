@@ -57,7 +57,7 @@ prysm.sh beacon-chain db restore --restore-source-file=/path/to/backup --restore
 **Using Bazel**
 
 ```sh
-bazel run /cmd/beacon-chain -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
+bazel run //cmd/beacon-chain -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
 ```
 
 </TabItem>
@@ -81,7 +81,7 @@ prysm.sh beacon-chain db restore --restore-source-file=/path/to/backup --restore
 **Using Bazel**
 
 ```sh
-bazel run /cmd/beacon-chain -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
+bazel run //cmd/beacon-chain -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
 ```
 
 </TabItem>
@@ -96,7 +96,7 @@ prysm.sh beacon-chain db restore --restore-source-file=/path/to/backup --restore
 **Using Bazel**
 
 ```sh
-bazel run /cmd/beacon-chain -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
+bazel run //cmd/beacon-chain -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
 ```
 
 </TabItem>
@@ -139,7 +139,7 @@ prysm.sh validator db restore --restore-source-file=/path/to/backup --restore-ta
 **Using Bazel**
 
 ```sh
-bazel run /cmd/validator -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
+bazel run //cmd/validator -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
 ```
 
 </TabItem>
@@ -163,7 +163,7 @@ prysm.sh validator db restore --restore-source-file=/path/to/backup --restore-ta
 **Using Bazel**
 
 ```sh
-bazel run /cmd/validator -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
+bazel run //cmd/validator -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
 ```
 
 </TabItem>
@@ -178,10 +178,8 @@ prysm.sh validator db restore --restore-source-file=/path/to/backup --restore-ta
 **Using Bazel**
 
 ```sh
-bazel run /cmd/validator -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
+bazel run //cmd/validator -- db restore --restore-source-file=/path/to/backup --restore-target-dir=/path/to/desired/datadir
 ```
 
 </TabItem>
 </Tabs>
-
-

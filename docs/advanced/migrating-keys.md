@@ -75,7 +75,7 @@ docker run -it -v /path/to/outputdir:/output -v /path/to/wallet:/wallet gcr.io/p
 **Using Bazel**
 
 ```sh
-bazel run /cmd/validator -- slashing-protection-history export --datadir=/path/to/validatorDb --slashing-protection-export-dir=/path/to/desired/outputdir
+bazel run //cmd/validator -- slashing-protection-history export --datadir=/path/to/validatorDb --slashing-protection-export-dir=/path/to/desired/outputdir
 ```
 
 The first time you run the process you will be asked to accept or decline the terms and conditions. Once accepted, the process exports the slashing protection JSON file in your specified `/path/to/outputdir` folder.
@@ -118,7 +118,7 @@ docker run -it -v /path/to/outputdir:/output -v /path/to/wallet:/wallet gcr.io/p
 **Using Bazel**
 
 ```sh
-bazel run /cmd/validator -- slashing-protection-history export --datadir=/path/to/validatorDb --slashing-protection-export-dir=/path/to/desired/outputdir
+bazel run //cmd/validator -- slashing-protection-history export --datadir=/path/to/validatorDb --slashing-protection-export-dir=/path/to/desired/outputdir
 ```
 
 The first time you run the process you will be asked to accept or decline the terms and conditions. Once accepted, the process exports the slashing protection JSON file in your specified /path/to/outputdir folder.
@@ -135,7 +135,7 @@ The first time you run the process you will be asked to accept or decline the te
 **Using Bazel**
 
 ```sh
-bazel run /cmd/validator -- slashing-protection-history export --datadir=/path/to/validatorDb --slashing-protection-export-dir=/path/to/desired/outputdir
+bazel run //cmd/validator -- slashing-protection-history export --datadir=/path/to/validatorDb --slashing-protection-export-dir=/path/to/desired/outputdir
 ```
 
 The first time you run the process you will be asked to accept or decline the terms and conditions. Once accepted, the process exports the slashing protection JSON file in your specified /path/to/outputdir folder.
@@ -261,7 +261,7 @@ docker run -it -v /path/to/desiredimportfile.json:/import/desiredimportfile.json
 **Using Bazel**
 
 ```sh
-bazel run /cmd/validator -- slashing-protection-history import --datadir=/path/to/validatorDb --slashing-protection-json-file=/path/to/desiredimportfile
+bazel run //cmd/validator -- slashing-protection-history import --datadir=/path/to/validatorDb --slashing-protection-json-file=/path/to/desiredimportfile
 ```
 
 </TabItem>
@@ -296,7 +296,7 @@ docker run -it -v /path/to/desiredimportfile.json:/import/desiredimportfile.json
 **Using Bazel**
 
 ```sh
-bazel run /cmd/validator -- slashing-protection-history import --datadir=/path/to/validatorDb --slashing-protection-json-file=/path/to/desiredimportfile
+bazel run //cmd/validator -- slashing-protection-history import --datadir=/path/to/validatorDb --slashing-protection-json-file=/path/to/desiredimportfile
 ```
 
 </TabItem>
@@ -311,7 +311,7 @@ bazel run /cmd/validator -- slashing-protection-history import --datadir=/path/t
 **Using Bazel**
 
 ```sh
-bazel run /cmd/validator -- slashing-protection-history import --datadir=/path/to/validatorDb --slashing-protection-json-file=/path/to/desiredimportfile
+bazel run //cmd/validator -- slashing-protection-history import --datadir=/path/to/validatorDb --slashing-protection-json-file=/path/to/desiredimportfile
 ```
 
 </TabItem>
@@ -357,5 +357,3 @@ Once complete, verify the account removal using the validator accounts list comm
 **When I migrate my slashing protection history from Machine A -> Machine B, or Client A -> Client B, do I need to retain A's slashing protection history after importing to B?**
 
 No. After successfully importing your slashing protection history from A -> B, you can discard A. If you need to migrate from B -> C, B's slashing protection history is all you need to export/import.
-
-

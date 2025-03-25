@@ -85,14 +85,14 @@ docker run -it -v $HOME/Eth2Validators/prysm-wallet-v2:/wallet \
 **Using Bazel**
 
 ```bash
-bazel run /cmd/prysmctl --config=release -- validator exit --wallet-dir=/wallet --beacon-rpc-provider=<127.0.0.1:4000> 
+bazel run //cmd/prysmctl --config=release -- validator exit --wallet-dir=/wallet --beacon-rpc-provider=<127.0.0.1:4000>
 ```
 :::caution
 
 The following command is a soon-to-be-deprecated alternative that you should avoid using:
 
 ```bash
-bazel run /cmd/validator --config=release -- accounts voluntary-exit
+bazel run //cmd/validator --config=release -- accounts voluntary-exit
 ```
 
 :::
@@ -181,14 +181,14 @@ docker run -it -v $HOME/Eth2Validators/prysm-wallet-v2:/wallet \
 **Using Bazel**
 
 ```bash
-bazel run /cmd/prysmctl --config=release -- validator exit --wallet-dir=/wallet --beacon-rpc-provider=<127.0.0.1:4000> 
+bazel run //cmd/prysmctl --config=release -- validator exit --wallet-dir=/wallet --beacon-rpc-provider=<127.0.0.1:4000> 
 ```
 :::caution
 
 The following command is a soon-to-be-deprecated alternative that you should avoid using:
 
 ```bash
-bazel run /cmd/validator --config=release -- accounts voluntary-exit
+bazel run //cmd/validator --config=release -- accounts voluntary-exit
 ```
 
 :::
@@ -197,6 +197,3 @@ bazel run /cmd/validator --config=release -- accounts voluntary-exit
 </Tabs>
 
 **Note:** The above-referenced commands that are being deprecated have not been removed yet, but mirror those found in `prysmctl`.
-
-
-

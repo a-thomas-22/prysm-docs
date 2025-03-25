@@ -73,15 +73,15 @@ The Prysm project is a large monorepo containing all sorts of tools and services
 
 To build the beacon chain, run the following command:
 
-    bazel build /cmd/beacon-chain
+    bazel build //cmd/beacon-chain
 
 To build the validator client, run the following command:
 
-    bazel build /cmd/validator
+    bazel build //cmd/validator
 
 Other binaries in our codebase use a similar command to build. If you want to run a particular built binary, you can use the command:
 
-    bazel run /cmd/beacon-chain -- --help
+    bazel run //cmd/beacon-chain -- --help
 
 Where you can specify any amount of command line arguments you need based on the available flags of the item you're running.
 
@@ -187,4 +187,3 @@ After you complete the questionnaire, the pull request will appear in the list o
 #### Following up
 
 Core developers may ask questions and request that you make edits. If you set notifications at the top of the page to `not watching`, you will still be notified by email whenever someone comments on the page of a pull request you have created. If you are asked to modify your pull request, edit your local branch, push up your fixes, then leave a comment to notify the original reviewer that the pull request is ready for further review.
-

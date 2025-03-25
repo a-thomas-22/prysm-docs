@@ -19,8 +19,8 @@ Prysmatic requires all code to adhere to correct commentary conventions for any 
 #### Good:
 
 ```go
-/ ExecuteStateTransition transforms the current state of a beacon node by applying the
-/ transformations specified in the official Ethereum Serenity specification.
+// ExecuteStateTransition transforms the current state of a beacon node by applying the
+// transformations specified in the official Ethereum Serenity specification.
 func ExecuteStateTransition(state *pb.BeaconState, block *pb.BeaconBlock) (*pb.BeaconState, error) {
   ...
 }
@@ -29,7 +29,7 @@ func ExecuteStateTransition(state *pb.BeaconState, block *pb.BeaconBlock) (*pb.B
 #### Bad:
 
 ```go
-/ This function executes a state transition.
+// This function executes a state transition.
 func ExecuteStateTransition(state *pb.BeaconState, block *pb.BeaconBlock) (*pb.BeaconState, error) {
   ...
 }
@@ -42,8 +42,8 @@ Ensure your names are clear, concise and make no assumptions about your code wit
 #### Good:
 
 ```go
-/ justificationUpperLimit defines a ceiling after which a block cannot pass processing conditions
-/ as defined in the Ethereum Serenity specification.
+// justificationUpperLimit defines a ceiling after which a block cannot pass processing conditions
+// as defined in the Ethereum Serenity specification.
 slotDuration := params.BeaconConfig().SlotDuration
 justificationBoundary := params.BeaconConfig().JustificationBoundary
 justificationUpperLimit := slotDuration * justificationBoundary
@@ -104,4 +104,3 @@ func UpdateBeaconState(currentState *pb.BeaconState, blockCh chan<- *types.Block
   }
 }
 ```
-
