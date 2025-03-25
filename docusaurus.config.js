@@ -24,7 +24,7 @@ module.exports = {
             logo: {
                 alt: "Prysm logo",
                 src: 'img/logo2.png',
-                href: '/docs/getting-started',
+                href: '/prysm/docs/getting-started',
             },
             items: [{
                 type: 'docsVersion',
@@ -33,7 +33,7 @@ module.exports = {
                 label: prysmVersion,
             },
             {
-                to: 'docs/install/install-with-script',
+                to: '/prysm/docs/install/install-with-script',
                 label: 'Quick Install',
                 position: 'right',
             },
@@ -52,7 +52,7 @@ module.exports = {
         footer: {
             logo: {
                 alt: "Prysm Eth2 Docs",
-                href: '/docs/getting-started',
+                href: '/prysm/docs/getting-started',
                 src: 'img/Prysm.svg',
             },
             copyright: `Copyright © ${new Date().getFullYear()} Prysmatic Labs, LLC., Validator Deposit Contract 0x00000000219ab540356cbb839cbe05303d7705fa`,
