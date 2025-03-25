@@ -42,11 +42,11 @@ A: Community provided UI solutions will continue to provide a graphical interfac
 
 **Q: How do I exit my validator without the Web UI**
 
-A: A cli command through the prysmctl tool or validator client can be used to exit the validator. Learn more about that [here](../wallet/exiting-a-validator.md).
+A: A cli command through the prysmctl tool or validator client can be used to exit the validator. Learn more about that [here](/wallet/exiting-a-validator.md).
 
 **Q: How do I export slashing protection without the Web UI**
 
-A: A cli command through the validator client can provide slashing protection exports, Community provided UI solutions can also provide this information via the client standard [keymanager APIs](https://ethereum.github.io/keymanager-APIs/) when removing a local validator. Learn more about it [here](../wallet/slashing-protection.md).
+A: A cli command through the validator client can provide slashing protection exports, Community provided UI solutions can also provide this information via the client standard [keymanager APIs](https://ethereum.github.io/keymanager-APIs/) when removing a local validator. Learn more about it [here](/wallet/slashing-protection.md).
 
 :::
 

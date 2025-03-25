@@ -20,10 +20,10 @@ After the Deneb hardfork
 :::
 
 ## UNKNOWN State
-Prysm's [validator](validator-clients.md) client will report that the state of a particular validator is UNKNOWN when it loads validator keys that have not yet submitted a valid deposit to the [Ethereum proof-of-work chain](/terminology#eth1) [validator deposit contract](./validator-deposit-contract).
+Prysm's [validator](validator-clients.md) client will report that the state of a particular validator is UNKNOWN when it loads validator keys that have not yet submitted a valid deposit to the [Ethereum proof-of-work chain](/terminology#eth1) [validator deposit contract](/how-prysm-works/validator-deposit-contract).
 
 ## DEPOSITED State
-Once a valid transaction has been submitted to the [validator deposit contract](./validator-deposit-contract), your [beacon node](./beacon-node) will detect the presence of the transaction on the ETH1 chain and your [validator](validator-clients.md) client will now report being in the DEPOSITED state.
+Once a valid transaction has been submitted to the [validator deposit contract](/how-prysm-works/validator-deposit-contract), your [beacon node](/how-prysm-works/beacon-node) will detect the presence of the transaction on the ETH1 chain and your [validator](validator-clients.md) client will now report being in the DEPOSITED state.
 
 ## PENDING State
 
@@ -35,7 +35,7 @@ Once the activation epoch arrives, the validator is activated and assigned respo
 
 ## Withdrawals
 
-Validators that have been active and have a validator index (including validators that are slashed/exited) can initiate a [BLStoExecutionChange](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/beacon-chain.md#blstoexecutionchange) request that changes its `withdrawal_credentials` which begins the withdrawal process. Once the `withdrawal_credentials` are changed withdrawals will automatically be processed at the rate of 16 per block. Fully exited validators will also be fully withdrawn once withdrawals are initiated. Learn more in our [withdrawal guide](../wallet/withdraw-validator.md).
+Validators that have been active and have a validator index (including validators that are slashed/exited) can initiate a [BLStoExecutionChange](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/beacon-chain.md#blstoexecutionchange) request that changes its `withdrawal_credentials` which begins the withdrawal process. Once the `withdrawal_credentials` are changed withdrawals will automatically be processed at the rate of 16 per block. Fully exited validators will also be fully withdrawn once withdrawals are initiated. Learn more in our [withdrawal guide](/wallet/withdraw-validator.md).
 
 ## EXITING State 
 An ACTIVE validator may request to exit by submitting a signed [VoluntaryExit](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#voluntary-exits) operation to the Ethereum network. Assuming the validator has been in the active state for the `SHARD_COMMITTEE_PERIOD`or 256 epochs ~ 27 hours plus the look ahead 4~5 epochs(~31 minutes), the validator will be assigned an exit_epoch that is determined by the length of the exiting queue. The beacon chain can process the exits of 4 ~ 16 validators per finalized epoch, the difference in the number is determined by the number of total active validators on the chain.

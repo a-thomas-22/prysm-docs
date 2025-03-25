@@ -11,7 +11,7 @@ import {HeaderBadgesWidget} from '@site/src/components/HeaderBadgesWidget.js';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Voluntarily exiting your validator from the Ethereum network is a one time command using the [prysmctl tool](../prysm-usage/prysmctl.md). Note that this operation was previously facilitated by a command exposed by the Prysm validator client, and can still be accessed that way. At a high level, you'll follow these steps to exit your validator:
+Voluntarily exiting your validator from the Ethereum network is a one time command using the [prysmctl tool](/prysm-usage/prysmctl.md). Note that this operation was previously facilitated by a command exposed by the Prysm validator client, and can still be accessed that way. At a high level, you'll follow these steps to exit your validator:
 
  1. Ensure that you have access to a fully synced beacon node.
  2. Issue the `validator exit` command to your validator and allow the beacon node to access to your validator keys through the `--wallet-dir` flag or [web3signer](web3signer.md) and the `--beacon-rpc-provider` flag (examples provided below).
@@ -24,7 +24,7 @@ Looking for a particular phrase to perform a voluntary exit in Prysm? Read step 
 
 :::
 
-After providing confirmation, voluntary exit request will be broadcasted through your beacon node. Visit our [Command-line options documentation](../prysm-usage/parameters.md) for more configuration options.
+After providing confirmation, voluntary exit request will be broadcasted through your beacon node. Visit our [Command-line options documentation](/prysm-usage/parameters.md) for more configuration options.
 
 :::caution 
 

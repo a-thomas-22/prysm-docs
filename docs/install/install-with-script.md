@@ -66,7 +66,7 @@ import QuickstartRunValidatorPartial from '@site/docs/install/partials/_quicksta
 This usually takes a few hours if your disk I/O is relatively slow. If it remains in this state for more than a day, your disk might not be able to write data as fast as the chain head advances. The most straightforward way to resolve this is using an SSD.
 
 **Why do you recommend putting everything on a single machine?** <br />
-Keeping all of your client software on a single machine keeps things simple, which aligns with our [security best practices](../security-best-practices.md).
+Keeping all of your client software on a single machine keeps things simple, which aligns with our [security best practices](/security-best-practices.md).
 
 **Can I use Prysm on a Mac M1 ARM chip?** <br />
 Yes. Choose **one** of the following actions to ensure that Prysm can run on your M1:
@@ -80,7 +80,7 @@ No.
 We recommend **closing** TCP port `8545` to the internet and keeping TCP and UDP ports `30303` **open** to support other execution nodes.
 
 **Can you mix and match networks between execution layer and consensus layer?** <br />
-No. See [Nodes and networks](../concepts/nodes-networks.md) for more information.
+No. See [Nodes and networks](/concepts/nodes-networks.md) for more information.
 
 **Can I stake with less than 32 ETH?** <br />
 Yes! <a href='https://ethereum.org/en/staking/pools/'>Pooled staking</a> lets you stake with less than 32 ETH. 

@@ -12,7 +12,7 @@ This document provides guidance on migrating Prysm and your validator keys from 
 
 :::danger Slashing Prevention
 
-The following best practices will help minimize the risk of [slashing](../concepts/slashing.md) while migrating between machines:
+The following best practices will help minimize the risk of [slashing](/concepts/slashing.md) while migrating between machines:
 
 1.	Never run more than a single validator process with the same keys loaded.
 2.  Delete your keys from the old machine before starting your new machine.
@@ -202,7 +202,7 @@ You can also run the accounts backup command non-interactively by using the foll
 **Flag Usage**
 
 | Flag                     | Usage                                                                                                  |
-| ------------------------ | :----------------------------------------------------------------------------------------------------- |
+|--------------------------|:-------------------------------------------------------------------------------------------------------|
 | `--wallet-dir`           | Path to a wallet directory (default: "$HOME/Eth2Validators/prysm-wallet-v2")                           |
 | `--wallet-password-file` | Path to a plain-text, .txt file containing your wallet's password.                                     |
 | `--backup-dir`           | Path to a directory where accounts will be backed up into a zip file. (default: $HOME/Eth2Validators/) |

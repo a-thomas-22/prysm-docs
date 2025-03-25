@@ -94,7 +94,7 @@ import TabItem from '@theme/TabItem';
 
 <div>
 
-Syncing from a checkpoint usually takes a couple of minutes. See [Sync from a checkpoint](../../prysm-usage/checkpoint-sync.md) for more information about this feature.
+Syncing from a checkpoint usually takes a couple of minutes. See [Sync from a checkpoint](/prysm-usage/checkpoint-sync.md) for more information about this feature.
 
 <Tabs groupId="network" defaultValue="mainnet" values={[
       {label: 'Mainnet', value: 'mainnet'},

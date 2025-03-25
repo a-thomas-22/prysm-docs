@@ -14,7 +14,7 @@ import {HeaderBadgesWidget} from '@site/src/components/HeaderBadgesWidget.js';
 
 :::info Knowledge Check
 
-**Not familiar with nodes, networks, and related terminology?** Consider reading [Nodes and networks](../concepts/nodes-networks.md) before proceeding. 
+**Not familiar with nodes, networks, and related terminology?** Consider reading [Nodes and networks](/concepts/nodes-networks.md) before proceeding. 
 
 :::
 
@@ -29,7 +29,7 @@ In this how-to, we'll walk through the following tasks:
  4. Configure your beacon node to [broadcast your public IP address](#broadcast-your-public-ip-address).
  5. [Verify your node's discoverability](#verify-your-nodes-discoverability) by using a TCP lookup tool.
 
-Note that **as long as you can complete the [Status checklist](../monitoring/checking-status.md) without error, this isn't required**. These are optimizations targeted at power users.
+Note that **as long as you can complete the [Status checklist](/monitoring/checking-status.md) without error, this isn't required**. These are optimizations targeted at power users.
 
 ## Configure your firewall
 
@@ -46,7 +46,7 @@ The following firewall rules should be configured on any local operating system,
 
 
 | Port/protocol   | Firewall rule                       | Reason/caveats                                                                                                                                                                                                                                                                                               |
-| --------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|-----------------|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `8545/TCP`      | Block all traffic.                  | This is the JSON-RPC port for your execution node's Query API. You (and apps) can use this port to check execution node status, query execution-layer chain data, and even submit transactions. This port generally shouldn't be exposed to the outside world.                                               |
 | `3500/TCP`      | Block all traffic.                  | This is the JSON-RPC port for your beacon node's Query API. You (and apps) can use this port to check beacon node status and query consensus-layer chain data. This port generally shouldn't be exposed to the outside world.                                                                                |
 | `8551/TCP`      | Block all traffic.                  | Your beacon node connects to your execution node's [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) using this port. Inbound and outbound traffic should be allowed through this port only if your local beacon node is connecting to a remote execution node. |
@@ -78,11 +78,11 @@ import MultidimensionalContentControlsPartial from '@site/docs/partials/_multidi
 <TabItem value="win">
 
 
-| IP type | Command                                                            |
-| ------- | ------------------------------------------------------------------ |
-| Private | <code>ipconfig &#124; findstr /i "IPv4 Address"</code>             |
+| IP type | Command                                                           |
+|---------|-------------------------------------------------------------------|
+| Private | <code>ipconfig &#124; findstr /i "IPv4 Address"</code>            |
 | Public  | Visit [v4.ident.me](http:/v4.ident.me/) or run `curl v4.ident.me` |
-| Router  | <code>ipconfig &#124; findstr /i "Gateway"</code>                  |
+| Router  | <code>ipconfig &#124; findstr /i "Gateway"</code>                 |
 
   
 </TabItem>
@@ -90,9 +90,9 @@ import MultidimensionalContentControlsPartial from '@site/docs/partials/_multidi
 
 
 | IP type | Command                                                                                                |
-| ------- | ------------------------------------------------------------------------------------------------------ |
+|---------|--------------------------------------------------------------------------------------------------------|
 | Private | <code>ifconfig &#124; grep "inet " &#124; grep -v 127.0.0.1</code>                                     |
-| Public  | Visit [v4.ident.me](http:/v4.ident.me/) or run `curl v4.ident.me`                                     |
+| Public  | Visit [v4.ident.me](http:/v4.ident.me/) or run `curl v4.ident.me`                                      |
 | Router  | <code>ip route &#124; grep default</code> (Linux) <code>netstat -nr &#124; grep default</code> (MacOS) |
 
 
@@ -149,6 +149,6 @@ If you see the following results, your beacon node is highly discoverable:
 
 You can perform the same test using `30303/TCP` to test your execution node's discoverability. 
 
-See [Check your node and validator status](../monitoring/checking-status.md) for a comprehensive status checklist.
+See [Check your node and validator status](/monitoring/checking-status.md) for a comprehensive status checklist.
 
 

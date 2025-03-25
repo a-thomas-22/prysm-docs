@@ -123,7 +123,7 @@ Run the following command to create your mnemonic (a unique and <strong>highly s
     <p>Exercise extreme caution throughout this procedure - <strong>never send real ETH to the testnet deposit contract.</strong></p>
   </TabItem>
 </Tabs>
-<p>Finally, run the following command to start your validator, replacing <code>&lt;YOUR_FOLDER_PATH&gt;</code> with the full path to your <code>consensus</code> folder and <code>&lt;YOUR_WALLET_ADDRESS&gt;</code> by the address of a wallet you own. When your validator proposes a block, it will allow you to earn block priority fees, also sometimes called "tips". See <a href='../execution-node/fee-recipient'>How to configure Fee Recipient</a> for more information about this feature:</p>
+<p>Finally, run the following command to start your validator, replacing <code>&lt;YOUR_FOLDER_PATH&gt;</code> with the full path to your <code>consensus</code> folder and <code>&lt;YOUR_WALLET_ADDRESS&gt;</code> by the address of a wallet you own. When your validator proposes a block, it will allow you to earn block priority fees, also sometimes called "tips". See <a href='/execution-node/fee-recipient'>How to configure Fee Recipient</a> for more information about this feature:</p>
 
 <Tabs groupId="os" defaultValue="others" values={[
     {label: 'Windows', value: 'win'},

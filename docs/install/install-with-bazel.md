@@ -103,7 +103,7 @@ Bazel will automatically pull and install any dependencies as well, including Go
 
 :::info Knowledge Check
 
-**Not familiar with nodes, networks, and related terminology?** Consider reading [Nodes and networks](../concepts/nodes-networks.md) before proceeding. 
+**Not familiar with nodes, networks, and related terminology?** Consider reading [Nodes and networks](/concepts/nodes-networks.md) before proceeding. 
 
 :::
 
@@ -161,7 +161,7 @@ bazel run /cmd/beacon-chain --config=release -- --execution-endpoint=<YOUR_ETH_E
 
 ## Run a validator
 
-Ensure that your beacon node is fully synced before proceeding. See [Check node and validator status](../monitoring/checking-status.md) for detailed status-checking instructions.
+Ensure that your beacon node is fully synced before proceeding. See [Check node and validator status](/monitoring/checking-status.md) for detailed status-checking instructions.
 
 Navigate to the [Mainnet Launchpad](https://launchpad.ethereum.org/summary) and follow the instructions. If you want to participate in the **testnet**, you can navigate to the [Holesky](https://holesky.launchpad.ethereum.org/summary/).
 
