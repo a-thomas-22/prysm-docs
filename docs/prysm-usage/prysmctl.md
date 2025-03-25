@@ -66,7 +66,7 @@ git clone https://github.com/prysmaticlabs/prysm && cd prysm
 #### Build `prysmctl`
 
 ```
-bazel build /cmd/prysmctl --config=release
+bazel build //cmd/prysmctl --config=release
 ```
 
 Bazel will automatically pull and install any dependencies as well, including Go and necessary compilers.

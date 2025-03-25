@@ -260,8 +260,8 @@ You can edit these in the links above to your liking.
 You can load the images into your local Docker daemon by first building a `.tar` file as follows for your desired image bundle:
 
 ```text
-bazel build /cmd/beacon-chain:oci_image_tarball --config=release
-bazel build /cmd/validator:oci_image_tarball --config=release
+bazel build //cmd/beacon-chain:oci_image_tarball --config=release
+bazel build //cmd/validator:oci_image_tarball --config=release
 ```
 
 Then, you can load it into Docker with:
