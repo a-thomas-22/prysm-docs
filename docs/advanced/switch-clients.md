@@ -27,7 +27,7 @@ Regardless of which client you are switching to, the first step of the process w
 
 Installation documentation links for each client can be found below:
 
-- Prysm: /install/install-with-script
+- Prysm: [Quickstart](/install/install-with-script)
 - Teku: https://docs.teku.consensys.io/development/get-started/install/install-binaries
 - Nimbus: https://nimbus.guide/quick-start.html  
 - Lighthouse: https://lighthouse-book.sigmaprime.io/installation.html  
