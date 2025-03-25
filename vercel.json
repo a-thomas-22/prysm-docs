@@ -5,8 +5,8 @@
   "installCommand": "npm install",
   "trailingSlash": false,
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/docs", "destination": "/docs/getting-started" },
-    { "source": "/", "destination": "/docs/getting-started" }
+  "redirects": [
+    { "source": "/docs", "destination": "/docs/getting-started", "permanent": true },
+    { "source": "/", "destination": "/docs/getting-started", "permanent": true }
   ]
 }
