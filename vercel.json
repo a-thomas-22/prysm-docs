@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx docusaurus build --out-dir build/prysm",
+  "buildCommand": "npx docusaurus build --out-dir build/prysm/docs",
   "outputDirectory": "build",
   "framework": "docusaurus",
   "installCommand": "npm install",
