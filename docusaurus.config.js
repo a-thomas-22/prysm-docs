@@ -7,13 +7,13 @@ module.exports = {
     baseUrl: '/prysm/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'throw',
-    favicon: 'prysm/docs/img/Prysm.svg',
+    favicon: 'docs/img/Prysm.svg',
     organizationName: 'Prysmatic Labs',
     projectName: 'prysm-docs',
     staticDirectories: ['static'],
 
     customFields: {
-        image: 'prysm/docs/img/Prysm.svg',
+        image: 'docs/img/Prysm.svg',
         prysmVersion: prysmVersion,
     },
     trailingSlash: false,
@@ -24,7 +24,7 @@ module.exports = {
             title: "Prysm Documentation",
             logo: {
                 alt: "Prysm logo",
-                src: 'prysm/docs/img/logo2.png',
+                src: 'docs/img/logo2.png',
                 href: '/prysm/docs/getting-started',
             },
             items: [{
@@ -54,7 +54,7 @@ module.exports = {
             logo: {
                 alt: "Prysm Eth2 Docs",
                 href: '/prysm/docs/getting-started',
-                src: 'prysm/docs/img/Prysm.svg',
+                src: 'docs/img/Prysm.svg',
             },
             copyright: `Copyright © ${new Date().getFullYear()} Prysmatic Labs, LLC., Validator Deposit Contract 0x00000000219ab540356cbb839cbe05303d7705fa`,
             links: [],
@@ -62,8 +62,8 @@ module.exports = {
         prism: {
             theme: require('prism-react-renderer/themes/dracula'),
         },
-        ogImage: 'prysm/docs/img/Prysm.svg',
-        twitterImage: 'prysm/docs/img/Prysm.svg',
+        ogImage: 'docs/img/Prysm.svg',
+        twitterImage: 'docs/img/Prysm.svg',
     },
     presets: [
         [

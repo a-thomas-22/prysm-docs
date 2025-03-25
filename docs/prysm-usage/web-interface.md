@@ -90,7 +90,7 @@ Third party tools such as DAppNode will initialize the user without use of the c
 
 If it is the first time you have ran your Prysm validator and have not yet created a wallet, you will be faced with a wallet creation screen allowing you to import the keystores generated from the Ethereum `deposit-cli`.
 
-![Image](/prysm/docs/img/walletcreate.png)
+![Image](/docs/img/walletcreate.png)
 
 upon completion of onboarding, your web page should always redirect you to the main dashboard.
 
@@ -139,7 +139,7 @@ If you plan to expose the website to the open Internet, please look into protect
 
 If your browser cache was cleared, you're running on a new browser, or validator was restarted you may be stuck on the initialize page. All you need to do is retrieve the special URL again and you should be re-authenticated which will redirect you to the main dashboard.
 
-![Dialog-expanded](/prysm/docs/img/dialog-error-expanded.png "dialog error expanded")
+![Dialog-expanded](/docs/img/dialog-error-expanded.png "dialog error expanded")
 
 ### HTTP Error Codes
 

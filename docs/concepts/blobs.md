@@ -4,7 +4,7 @@ title: Blobs
 sidebar_label: Blobs
 ---
 
-import BlobsPng from '@site/static/prysm/docs/img/blobs.png';
+import BlobsPng from '@site/static/docs/img/blobs.png';
 
 
 :::info

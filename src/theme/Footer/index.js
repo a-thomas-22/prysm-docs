@@ -1,6 +1,6 @@
 // src/theme/Footer/index.js
 import React from 'react';
-import OffchainLabsLogo from '@site/static/prysm/docs/img/logo-white.png';
+import OffchainLabsLogo from '@site/static/docs/img/logo-white.png';
 
 export default function Footer() {
   return (

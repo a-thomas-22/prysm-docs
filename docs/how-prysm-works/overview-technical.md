@@ -10,7 +10,7 @@ import {HeaderBadgesWidget} from '@site/src/components/HeaderBadgesWidget.js';
 
 This section outlines Prysm's various internal components and their role in the client.
 
-![Architecture Diagram](/prysm/docs/img/prysm-architecture.png)
+![Architecture Diagram](/docs/img/prysm-architecture.png)
 
 ## Prysm client components
 
