@@ -133,8 +133,8 @@ This section is currently out of date. Refer to Grafana's [The new unified alert
 ## Creating and importing dashboards
 
 1. The dashboard can now be customised to the users preferences. There are two examples that can be used:
-- [Dashboard designed for small amount of validator keys](https://docs.prylabs.network/assets/grafana-dashboards/small_amount_validators.json)
-- [Dashboard designed for more than 10 validator keys](https://docs.prylabs.network/assets/grafana-dashboards/big_amount_validators.json)
+- [Dashboard designed for small amount of validator keys](/assets/grafana-dashboards/small_amount_validators.json)
+- [Dashboard designed for more than 10 validator keys](/assets/grafana-dashboards/big_amount_validators.json)
 
 2. To import this json into the Grafana dashboard, click on the **+** icon on the left menu and select `Import dashboard``, 
 
@@ -148,6 +148,3 @@ For those running their node and validators on separate machines, simply modify 
 * [Finding a **public IP**](/docs/prysm-usage/p2p-host-ip/#public-ip-addresses)
 
 > **NOTICE:** In case of public IPs, [port forwarding](/docs/prysm-usage/p2p-host-ip/#port-forwarding) may need to be configured.
-
-
-

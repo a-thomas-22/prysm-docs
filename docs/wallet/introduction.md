@@ -48,7 +48,7 @@ wallet-directory/
         all-accounts.keystore.json
 ```
 
-[Create and use a non-HD wallet](https://docs.prylabs.network/docs/wallet/nondeterministic)
+[Create and use a non-HD wallet](/docs/wallet/nondeterministic)
 
 ## HD wallets
 
@@ -60,7 +60,7 @@ glue hawk service repeat album stable arctic piece kiss arrive viable labor conn
 
 HD wallets are password protected via a high-entropy, strong password, and allow for easy creation of as many validator account as you wish.
 
-[Create and use an HD wallet](https://docs.prylabs.network/docs/wallet/deterministic)
+[Create and use an HD wallet](/docs/wallet/deterministic)
 ## Frequently asked questions
 
 As you run your validator, you might run into unexpected errors or situations in which things aren't working as expected. Here are our answers to some of the most frequently asked questions.
