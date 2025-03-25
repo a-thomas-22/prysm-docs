@@ -4,7 +4,7 @@ module.exports = {
     title: 'Prysm',
     tagline: 'Ethereum consensus implementation written entirely in Go.',
     url: 'https://prysm-docs-temp-migration.vercel.app',
-    baseUrl: '/prysm/docs',
+    baseUrl: '/prysm/docs/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'throw',
     favicon: 'docs/images/Prysm.svg',
