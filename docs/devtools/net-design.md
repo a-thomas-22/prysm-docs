@@ -331,7 +331,7 @@ Libp2p’s GossipSub implementation has the concept of [topic validators](https:
 
 **Proposal 1: Use [PubSub.RegisterTopicValidator](https://godoc.org/github.com/libp2p/go-libp2p-pubsub#PubSub.RegisterTopicValidator)**
 
-![proposal1](/img/proposal1.png)
+![proposal1](/prysm/docs/img/proposal1.png)
 
 Built in functionality within the existing API will allow for arbitrary validation of incoming messages before automatically propagating to network peers. The benefit here is that the original message is relayed automatically with some knowledge of the originating message. In other words, the library could be clever enough not to propagate the message back to the originating peer.
 
@@ -340,7 +340,7 @@ Built in functionality within the existing API will allow for arbitrary validati
 
 A cost effective way to handle validation of message contents would be to register a validator that rejects everything by always returning “false” and shift this logic into the message handler. The handler will already have a decoded copy of the message and can check the contents for validity before calling Broadcast(msg) to propagate through the network. An alternative would be to registry a chain of adapters like we have in the current implementation.
 
-![proposal2](/img/proposal2.png)
+![proposal2](/prysm/docs/img/proposal2.png)
 
 **GossipSub Message Handlers** 
 

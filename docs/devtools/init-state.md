@@ -61,11 +61,11 @@ FSMs are responsible for managing state transitions (fetch request queued, block
 
 ## Service Design Diagram 
 
-![Service Diagram](/img/service-diagram.png)
+![Service Diagram](/prysm/docs/img/service-diagram.png)
 
 ## FSM State Transitions Diagram
 
-![FSM State Transitions Diagram](/img/fsm-state-trans.png)
+![FSM State Transitions Diagram](/prysm/docs/img/fsm-state-trans.png)
 
 ## Architectural Overview
 

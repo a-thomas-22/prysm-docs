@@ -6,7 +6,7 @@ sidebar_label: Configure MEV Builder
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import BuilderPng from '@site/static/img/builder.png';
+import BuilderPng from '@site/static/prysm/docs/img/builder.png';
 
 :::caution
 

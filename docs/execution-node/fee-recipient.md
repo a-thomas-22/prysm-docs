@@ -3,7 +3,7 @@ id: fee-recipient
 title: Configure Fee Recipient 
 sidebar_label: Configure Fee Recipient
 ---
-import FeeRecipientPng from '@site/static/img/fee-recipient-ui.png'
+import FeeRecipientPng from '@site/static/prysm/docs/img/fee-recipient-ui.png'
 import {HeaderBadgesWidget} from '@site/src/components/HeaderBadgesWidget.js';
 
 <HeaderBadgesWidget commaDelimitedContributors="James" />

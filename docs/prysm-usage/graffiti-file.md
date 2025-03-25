@@ -37,7 +37,7 @@ random:
 default: "Mr F was here"
 ```
 Example output:
-![image](/img/graffiti-specific.png)
+![image](/prysm/docs/img/graffiti-specific.png)
 
 ### Ordered
 Ordered chooses each entry of graffiti in order from the list. The validator will start again from the top of the list each time the graffiti file is updated. Once the list is finished, the `random` or `default` graffiti will be used. This takes precedent over both random and default.
@@ -78,7 +78,7 @@ random:
 default: "Mr F was here"
 ```
 Example output:
-![image](/img/graffiti-random.png)
+![image](/prysm/docs/img/graffiti-random.png)
 
 
 ### Default
@@ -98,6 +98,6 @@ Default specifies the graffiti to be used by all the keys under validator client
 default: "Mr F was here"
 ```
 Example output:
-![image](/img/graffiti-default.png)
+![image](/prysm/docs/img/graffiti-default.png)
 
 

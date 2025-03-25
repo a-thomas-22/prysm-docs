@@ -10,7 +10,7 @@ import {HeaderBadgesWidget} from '@site/src/components/HeaderBadgesWidget.js';
 
 [Grafana](https://grafana.com/) is an open-source data metrics tool that is used to aggregate large amounts of data into a comprehensive visual dashboard for easy analysis. This section includes instructions for installing Grafana on the local machine and configuring Telegram or Discord alerts for monitoring validator status on-the-go.
 
-![Grafana dashboard for prysm node and validator](/img/dashboard_overview.png "Grafana dashboard for prysm node and validator")
+![Grafana dashboard for prysm node and validator](/prysm/docs/img/dashboard_overview.png "Grafana dashboard for prysm node and validator")
 
 To view your validator's details, visit [beaconcha.in/validators](https://beaconcha.in/validators).
 
@@ -73,7 +73,7 @@ or do so in a terminal by issuing the command:
   > **NOTICE:** Prometheus' default data logging time is 15 days. To extend dashboard statistics to 31 days, add `--storage.tsdb.retention.time=31d` to this startup command.
 
 5. Navigate to [http://localhost:9090/graph](http://localhost:9090/graph) in a browser. It will present a page similar to this:
-![Prometheus page](/img/prometheus_page.png "Prometheus page")
+![Prometheus page](/prysm/docs/img/prometheus_page.png "Prometheus page")
 
 Take note of the `validator_statuses` and `total_voted_target_balances`, as they are required later.
 
@@ -133,8 +133,8 @@ This section is currently out of date. Refer to Grafana's [The new unified alert
 ## Creating and importing dashboards
 
 1. The dashboard can now be customised to the users preferences. There are two examples that can be used:
-- [Dashboard designed for small amount of validator keys](/assets/grafana-dashboards/small_amount_validators.json)
-- [Dashboard designed for more than 10 validator keys](/assets/grafana-dashboards/big_amount_validators.json)
+- [Dashboard designed for small amount of validator keys](/prysm/docs/assets/grafana-dashboards/small_amount_validators.json)
+- [Dashboard designed for more than 10 validator keys](/prysm/docs/assets/grafana-dashboards/big_amount_validators.json)
 
 2. To import this json into the Grafana dashboard, click on the **+** icon on the left menu and select `Import dashboard``, 
 
