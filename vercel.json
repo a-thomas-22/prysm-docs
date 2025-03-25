@@ -3,10 +3,10 @@
   "outputDirectory": "build",
   "framework": "docusaurus",
   "installCommand": "npm install",
-  "trailingSlash": true,
+  "trailingSlash": false,
   "cleanUrls": true,
   "redirects": [
-    { "source": "/prysm", "destination": "/prysm/docs/", "permanent": true },
-    { "source": "/", "destination": "/prysm/docs/", "permanent": true }
+    { "source": "/prysm", "destination": "/prysm/docs", "permanent": true },
+    { "source": "/", "destination": "/prysm/docs", "permanent": true }
   ]
 }

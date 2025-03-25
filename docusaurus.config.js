@@ -4,7 +4,7 @@ module.exports = {
     title: 'Prysm',
     tagline: 'Ethereum consensus implementation written entirely in Go.',
     url: 'https://prysm-docs-temp-migration.vercel.app',
-    baseUrl: '/prysm/docs/',
+    baseUrl: '/prysm/docs',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'throw',
     favicon: 'docs/images/Prysm.svg',
@@ -16,7 +16,7 @@ module.exports = {
         image: 'docs/images/Prysm.svg',
         prysmVersion: prysmVersion,
     },
-    trailingSlash: true,
+    trailingSlash: false,
     scripts: ['https://buttons.github.io/buttons.js'],
 
     themeConfig: {
@@ -25,7 +25,7 @@ module.exports = {
             logo: {
                 alt: "Prysm logo",
                 src: 'docs/images/logo2.png',
-                href: '/prysm/docs/',
+                href: '/prysm/docs',
             },
             items: [{
                 type: 'docsVersion',
@@ -53,7 +53,7 @@ module.exports = {
         footer: {
             logo: {
                 alt: "Prysm Eth2 Docs",
-                href: '/prysm/docs/',
+                href: '/prysm/docs',
                 src: 'docs/images/Prysm.svg',
             },
             copyright: `Copyright © ${new Date().getFullYear()} Prysmatic Labs, LLC., Validator Deposit Contract 0x00000000219ab540356cbb839cbe05303d7705fa`,
